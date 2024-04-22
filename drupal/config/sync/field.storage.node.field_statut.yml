@@ -1,0 +1,30 @@
+uuid: 8f4d120e-d998-439a-ab48-42984e9d53fa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_statut
+field_name: field_statut
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: actif
+      label: Actif
+    -
+      value: inactif
+      label: Inactif
+    -
+      value: en_pause
+      label: 'En pause'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,34 @@
+uuid: 5d872e7d-887d-4312-a427-d8852cb48691
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team
+    - node.type.project
+id: node.project.field_team
+field_name: field_team
+entity_type: node
+bundle: project
+label: Team
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: role
+      role:
+        team: team
+        content_editor: '0'
+        administrator: '0'
+        nextjs: '0'
+    include_anonymous: true
+field_type: entity_reference

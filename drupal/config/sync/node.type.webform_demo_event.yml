@@ -1,0 +1,23 @@
+uuid: b5fdb926-1ed8-4e58-b1ae-406fc30d02ea
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+      - webform_demo_event_registration
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: McbqvrZVKDhSx7QpIN-KNDo-l7QNWgtZXCtWWdnCEZg
+name: 'Demo: Event'
+type: webform_demo_event
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

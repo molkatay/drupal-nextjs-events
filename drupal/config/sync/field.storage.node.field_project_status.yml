@@ -1,0 +1,30 @@
+uuid: fc0ec795-f15a-4379-a8a5-96a87f851a9a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_project_status
+field_name: field_project_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: in_progress
+      label: 'In Progress'
+    -
+      value: completed
+      label: Completed
+    -
+      value: on_hold
+      label: 'On Hold'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

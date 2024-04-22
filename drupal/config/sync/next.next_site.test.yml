@@ -1,0 +1,11 @@
+uuid: 8caf4a23-e4aa-452b-8806-281203ca0bfd
+langcode: fr
+status: true
+dependencies: {  }
+id: test
+label: Test
+base_url: 'http://localhost:3000/'
+preview_url: 'http://localhost:3000/api/preview'
+preview_secret: secret
+revalidate_url: 'http://localhost:3000/api/revalidate'
+revalidate_secret: secret

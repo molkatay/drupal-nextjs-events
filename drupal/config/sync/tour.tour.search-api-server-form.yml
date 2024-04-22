@@ -1,0 +1,44 @@
+uuid: 7322722c-ad38-4b8f-ad30-7e33a3fba7e9
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search_api
+_core:
+  default_config_hash: 0kIrvs9YL0PKR2nGfa7deQoPoXrWR5nUI0UtCfj04LA
+id: search-api-server-form
+label: 'Ajouter ou modifier un serveur Search API'
+module: search_api
+routes:
+  -
+    route_name: entity.search_api_server.add_form
+  -
+    route_name: entity.search_api_server.edit_form
+tips:
+  search-api-server-form-introduction:
+    id: search-api-server-form-introduction
+    plugin: text
+    label: 'Ajouter ou modifier un serveur'
+    weight: 1
+    body: 'Ce formulaire peut être utilisé pour modifier un serveur existant ou ajouter un nouveau serveur à votre site. Les serveurs conserveront vos données indexées.'
+  search-api-server-form-name:
+    id: search-api-server-form-name
+    plugin: text
+    label: 'Nom du serveur'
+    weight: 2
+    selector: '#edit-name'
+    body: 'Saisir un nom pour identifier ce serveur. Par exemple, "Serveur Solr". Ceci ne sera affiché que dans l''interface d''administration.'
+  search-api-server-form-description:
+    id: search-api-server-form-description
+    plugin: text
+    label: 'Description du serveur'
+    weight: 3
+    selector: '#edit-description'
+    body: "Éventuellement, saisir une description pour expliquer plus en détail la fonction du serveur. Ceci ne sera affiché que dans l'interface d'administration."
+  search-api-server-form-backend:
+    id: search-api-server-form-backend
+    plugin: text
+    label: 'Type de backend du serveur'
+    weight: 4
+    selector: '#edit-backend'
+    body: 'Les serveurs peuvent être basés sur différentes technologies. Celles-ci sont appelées "backends". Un serveur utilise exactement un backend et ne peut pas en changer ultérieurement. Vous pouvez rendre disponible le backend "Base de données" en activant le module "Database Search". Un autre backend très courant est <a href="https://www.drupal.org/project/search_api_solr">"Solr"</a>, qui doit être configuré séparément.'

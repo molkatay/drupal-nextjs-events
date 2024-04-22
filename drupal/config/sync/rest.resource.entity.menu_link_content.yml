@@ -1,0 +1,18 @@
+uuid: ba14e8c9-e19a-482d-b909-2a6f1b629883
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_link_content
+    - serialization
+    - simple_oauth
+id: entity.menu_link_content
+plugin_id: 'entity:menu_link_content'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

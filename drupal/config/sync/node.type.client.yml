@@ -1,0 +1,18 @@
+uuid: 84c562f2-748d-4319-bddc-04bf638d3fef
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Client
+type: client
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

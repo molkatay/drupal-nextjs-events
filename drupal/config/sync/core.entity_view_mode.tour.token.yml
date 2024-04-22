@@ -1,0 +1,11 @@
+uuid: fab32fc3-650d-42ba-8273-9383ff21aca2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - tour
+id: tour.token
+label: Token
+description: ''
+targetEntityType: tour
+cache: true

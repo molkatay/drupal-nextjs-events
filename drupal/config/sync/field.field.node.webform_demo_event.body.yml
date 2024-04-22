@@ -1,0 +1,26 @@
+uuid: 1f2bd165-cda9-4c8e-8287-f72c4fac68af
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.webform_demo_event
+  module:
+    - text
+_core:
+  default_config_hash: kqYTgBpvsfapOwVjk0TOZdH9Szj2Zg3leAQEZRVWqfs
+id: node.webform_demo_event.body
+field_name: body
+entity_type: node
+bundle: webform_demo_event
+label: Corps
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

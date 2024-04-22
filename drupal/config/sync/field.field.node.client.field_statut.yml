@@ -1,0 +1,21 @@
+uuid: 206c804b-4c8f-4549-a31a-de9570d95b5d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_statut
+    - node.type.client
+  module:
+    - options
+id: node.client.field_statut
+field_name: field_statut
+entity_type: node
+bundle: client
+label: Statut
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

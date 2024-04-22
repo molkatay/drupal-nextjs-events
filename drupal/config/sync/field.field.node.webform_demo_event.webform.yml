@@ -1,0 +1,33 @@
+uuid: 573e9da8-d1fc-4fee-b066-59da51619b34
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.webform
+    - node.type.webform_demo_event
+  module:
+    - webform
+_core:
+  default_config_hash: tPtl85feamPsree7CheFbYfHO-G3wOrmQsuaxMFvdY0
+id: node.webform_demo_event.webform
+field_name: webform
+entity_type: node
+bundle: webform_demo_event
+label: Webform
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: ''
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

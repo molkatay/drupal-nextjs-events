@@ -1,0 +1,88 @@
+uuid: 048ff14a-e4a9-4b35-9f5d-a77cdde82835
+langcode: fr
+status: true
+dependencies:
+  module:
+    - views_ui
+_core:
+  default_config_hash: XIYL1KF7ND2XQRa5AxvEcp8vgCN2kUGiuBNhCgxrPME
+id: views-ui
+label: 'Voir la page de modification'
+module: views_ui
+routes:
+  -
+    route_name: entity.view.edit_form
+  -
+    route_name: entity.view.edit_display_form
+tips:
+  views-main:
+    id: views-main
+    plugin: text
+    label: "Gérer les paramètres d'affichage"
+    weight: 1
+    body: 'Voir ou modifier la configuration.'
+  views-ui-displays:
+    id: views-ui-displays
+    plugin: text
+    label: "S'affiche dans cette vue"
+    weight: 2
+    selector: '#views-display-top'
+    body: "Un affichage est une façon de rendre les résultats, par exemple comme une page ou un bloc. Une vue peut contenir plusieurs affichages, qui sont listés ici. L'affichage actif est mis en évidence."
+  views-ui-view-admin:
+    id: views-ui-view-admin
+    plugin: text
+    label: "Voir l'administration"
+    weight: 3
+    position: right
+    selector: '#views-display-extra-actions'
+    body: "Réaliser des tâches d'administration, comme ajouter une description et créer un clone. Cliquer sur le bouton déroulant pour voir les options disponibles."
+  views-ui-format:
+    id: views-ui-format
+    plugin: text
+    label: 'Format de sortie'
+    weight: 4
+    selector: .views-ui-display-tab-bucket.format
+    body: "Choisir comment afficher les résultats. Par ex., choisir <em>Contenu</em> pour afficher chaque élément dans son intégralité, utilisant vos paramètres d'affichage. Ou choississez <em>Champs</em>, qui permet de n'afficher que les champs sélectionnés pour chaque résultat. Des formats supplémentaires peuvent être ajoutés en installant des modules qui <em>étendent</em> les fonctionnalités de base de Drupal."
+  views-ui-fields:
+    id: views-ui-fields
+    plugin: text
+    label: Champs
+    weight: 5
+    selector: .views-ui-display-tab-bucket.field
+    body: 'Si cette vue utilise des champs, alors ils sont listés ici. Vous pouvez cliquer sur un champ pour le configurer.'
+  views-ui-filter:
+    id: views-ui-filter
+    plugin: text
+    label: 'Filtrer votre vue'
+    weight: 6
+    selector: .views-ui-display-tab-bucket.filter
+    body: 'Ajouter des filtres pour limiter le nombre de résultats affichés. Par ex., pour ne montrer que le contenu <em>publié</em>, il faudrait ajouter le filtrer <em>Publié</em> et selectionner <em>Oui</em>.'
+  views-ui-filter-operations:
+    id: views-ui-filter-operations
+    plugin: text
+    label: 'Filtrer les actions'
+    weight: 7
+    selector: '.views-ui-display-tab-bucket.filter .dropbutton-widget'
+    body: 'Ajouter, réarranger ou supprimer les filtres.'
+  views-ui-sorts:
+    id: views-ui-sorts
+    plugin: text
+    label: 'Critère de tri'
+    weight: 8
+    selector: .views-ui-display-tab-bucket.sort
+    body: "Contrôler l'ordre dans lequel les résultats sont affichés. Cliquer sur une une règle de tri active pour la configurer."
+  views-ui-sorts-operations:
+    id: views-ui-sorts-operations
+    plugin: text
+    label: 'Trier les actions'
+    weight: 9
+    selector: '.views-ui-display-tab-bucket.sort .dropbutton-widget'
+    body: 'Ajouter, réarranger ou supprimer les règles de tri.'
+  views-ui-preview:
+    id: views-ui-preview
+    plugin: text
+    label: Aperçu
+    weight: 10
+    position: right
+    selector: '#preview-submit'
+    body: 'Afficher un aperçu du résultat de la vue.'

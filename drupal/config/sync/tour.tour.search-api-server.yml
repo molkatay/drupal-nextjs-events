@@ -1,0 +1,49 @@
+uuid: 2b0e6cd6-59bf-4348-955e-049d64f7d5cf
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search_api
+_core:
+  default_config_hash: XF-X52fvU1eywjOhWClTlaZiOmijG87qNfkOFlqg2cI
+id: search-api-server
+label: 'Informations sur un serveur'
+module: search_api
+routes:
+  -
+    route_name: entity.search_api_server.canonical
+tips:
+  search-api-server-introduction:
+    id: search-api-server-introduction
+    plugin: text
+    label: 'Informations sur un serveur'
+    weight: 1
+    body: "Cette page affiche le résumé d'un serveur de recherche."
+  search-api-server-status:
+    id: search-api-server-status
+    plugin: text
+    label: État
+    weight: 2
+    selector: .search-api-server-summary--status
+    body: 'Indique si le serveur est actuellement activé ou désactivé.'
+  search-api-server-backend:
+    id: search-api-server-backend
+    plugin: text
+    label: 'Type de backend'
+    weight: 3
+    selector: .search-api-server-summary--backend
+    body: 'Le plugin de backend utilisé pour ce serveur. Le plugin de backend détermine comment les éléments sont indexés et recherchés — par exemple, en utilisant la base de données ou un serveur Apache Solr.'
+  search-api-server-indexes:
+    id: search-api-server-indexes
+    plugin: text
+    label: 'Indexes de recherche'
+    weight: 4
+    selector: .search-api-server-summary--indexes
+    body: 'Répertorie tous les index de recherche qui sont rattachés à ce serveur.'
+  search-api-server-clear:
+    id: search-api-server-clear
+    plugin: text
+    label: 'Supprimer toutes les données indexées'
+    weight: 5
+    selector: '#edit-clear'
+    body: "Ceci retirera définitivement toutes les données actuellement indexées sur ce serveur pour les index qui ne sont pas en lecture seule. Les éléments sont mis en attente pour la réindexation. Jusqu'à ce que la réindexation se produise, les recherches pour les index concernés ne renverront aucun résultat."

@@ -1,0 +1,34 @@
+uuid: 432d5899-a442-49a2-ad20-33408403f885
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.client
+    - paragraphs.paragraphs_type.texte
+  module:
+    - entity_reference_revisions
+id: node.client.field_notes
+field_name: field_notes
+entity_type: node
+bundle: client
+label: Notes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      texte: texte
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 2
+        enabled: false
+      texte:
+        weight: 3
+        enabled: true
+field_type: entity_reference_revisions

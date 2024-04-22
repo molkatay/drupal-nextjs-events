@@ -1,0 +1,29 @@
+uuid: cbfaa032-01bb-4ad6-9201-dd622203f281
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo
+    - media.type.image
+    - node.type.client
+id: node.client.field_logo
+field_name: field_logo
+entity_type: node
+bundle: client
+label: Logo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
