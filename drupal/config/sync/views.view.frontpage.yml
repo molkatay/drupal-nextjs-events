@@ -1,5 +1,5 @@
-uuid: 05ea7b20-f67c-4e7c-9fee-b82b9c90138f
-langcode: fr
+uuid: d27340de-2f1e-4ed4-a9cf-1e7092c774f6
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,16 +11,16 @@ dependencies:
 _core:
   default_config_hash: 6eeliKIydPjqyv5V__QqTfahvJMWkHjOVUUuUIdB1ik
 id: frontpage
-label: "Page d'accueil"
+label: Frontpage
 module: node
-description: "Tout le contenu promu en page d'accueil."
+description: 'All content promoted to the front page.'
 tag: default
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: 'Par défaut'
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -34,26 +34,26 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: 'Suivant ›'
-            previous: '‹ Précédent'
-            first: '« Premier'
-            last: 'Dernier »'
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Éléments par page'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Tout -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Décalage
+            offset_label: Offset
           quantity: 9
       exposed_form:
         type: basic
         options:
-          submit_button: Appliquer
+          submit_button: Apply
           reset_button: false
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -75,7 +75,7 @@ display:
           plugin_id: text_custom
           label: ''
           empty: true
-          content: "Aucun contenu de page d'accueil n'a été créé pour l'instant. Suivre le <a href=\"https://www.drupal.org/fr/docs/user_guide/fr/index.html\">Guide utilisateur</a> pour démarrer la construction de votre site."
+          content: 'No front page content has been created yet.<br/>Follow the <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide</a> to start building your site.'
           tokenize: false
         node_listing_empty:
           id: node_listing_empty
@@ -98,7 +98,7 @@ display:
           plugin_id: title
           label: ''
           empty: true
-          title: 'Bienvenue !'
+          title: Welcome!
       sorts:
         sticky:
           id: sticky
@@ -261,7 +261,7 @@ display:
       tags: {  }
   feed_1:
     id: feed_1
-    display_title: Flux
+    display_title: Feed
     display_plugin: feed
     position: 2
     display_options:

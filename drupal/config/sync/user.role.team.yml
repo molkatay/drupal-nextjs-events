@@ -1,9 +1,0 @@
-uuid: 725a5ffe-bcaf-4fac-bb62-dcae514a4747
-langcode: fr
-status: true
-dependencies: {  }
-id: team
-label: Team
-weight: 5
-is_admin: null
-permissions: {  }

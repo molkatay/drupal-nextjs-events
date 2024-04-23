@@ -1,5 +1,5 @@
-uuid: 5b8100ee-a27d-4a31-9069-962752ee4864
-langcode: fr
+uuid: 94e91632-9e5f-416f-85b3-ec1ce79bb334
+langcode: en
 status: true
 dependencies:
   module:
@@ -8,20 +8,20 @@ dependencies:
 _core:
   default_config_hash: YqZN5rc7XDQcFcInc8wkzuaHJmC5YvirhTmDcrarT6M
 id: content_recent
-label: 'Contenu récent'
+label: 'Recent content'
 module: node
-description: 'Contenu récent.'
+description: 'Recent content.'
 tag: default
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: 'Par défaut'
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: 'Contenu récent'
+      title: 'Recent content'
       fields:
         title:
           id: title
@@ -131,10 +131,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Appliquer
+          submit_button: Apply
           reset_button: false
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -155,7 +155,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'Aucun contenu disponible.'
+          content: 'No content available.'
           tokenize: false
       sorts:
         changed:
@@ -290,7 +290,7 @@ display:
           required: true
       use_more: false
       use_more_always: false
-      use_more_text: Plus
+      use_more_text: More
       link_display: '0'
       link_url: ''
       header: {  }
@@ -307,7 +307,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Bloc
+    display_title: Block
     display_plugin: block
     position: 1
     display_options:

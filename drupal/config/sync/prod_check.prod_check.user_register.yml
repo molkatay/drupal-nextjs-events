@@ -1,0 +1,15 @@
+uuid: c9fb19c5-3297-49a0-b6b8-b2bc878e4769
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: y6w8ccCJ9AeZRbWVoipMxrlf0d6-InIPVynYJ-CWfZs
+id: user_register
+label: 'User registration'
+plugin: user_register
+configuration:
+  options:
+    admin_only: admin_only
+    visitors_admin_approval: visitors_admin_approval
+    visitors: 0
+  severity: 1

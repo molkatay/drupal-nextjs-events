@@ -1,0 +1,10 @@
+uuid: 009ee7fd-d97c-41c3-b955-9f02878bd939
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iUmVSu9lNsRGsLTIoL5flFFBplbowebZcxFMIaTOzzw
+id: internal
+label: Internal
+plugin: internal
+configuration: {  }

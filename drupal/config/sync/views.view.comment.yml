@@ -1,27 +1,27 @@
-uuid: edc0924c-8bd0-4408-a3ae-e622f3470879
-langcode: fr
+uuid: deba2d8e-fd97-4082-9c1e-1ca8a369e3c1
+langcode: en
 status: true
 dependencies:
   module:
     - comment
     - user
 _core:
-  default_config_hash: CgXkKY33fd-yaHz89du2hSw6MJOoIeNUJ-VHE5BiSdQ
+  default_config_hash: WFURZFZFHS9S7tEJJqOd6ucYexi84JiyQxE5suLP7D8
 id: comment
-label: Commentaires
+label: Comments
 module: comment
-description: 'Trouver et gérer les commentaires.'
+description: 'Find and manage comments.'
 tag: default
 base_table: comment_field_data
 base_field: cid
 display:
   default:
     id: default
-    display_title: 'Par défaut'
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: Commentaires
+      title: Comments
       fields:
         comment_bulk_form:
           id: comment_bulk_form
@@ -88,7 +88,7 @@ display:
           entity_type: comment
           entity_field: subject
           plugin_id: field
-          label: Objet
+          label: Subject
           exclude: false
           alter:
             alter_text: false
@@ -218,7 +218,7 @@ display:
           entity_type: comment
           entity_field: name
           plugin_id: field
-          label: Auteur
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -282,7 +282,7 @@ display:
           entity_type: comment
           entity_field: entity_id
           plugin_id: commented_entity
-          label: 'Posté sur'
+          label: 'Posted in'
           exclude: false
           alter:
             alter_text: false
@@ -347,7 +347,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: field
-          label: 'Mis à jour'
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -395,7 +395,7 @@ display:
             custom_date_format: ''
             timezone: ''
             tooltip:
-              date_format: ''
+              date_format: long
               custom_date_format: ''
             time_diff:
               enabled: false
@@ -422,7 +422,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Actions
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -537,26 +537,26 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: "suivant\_›"
-            previous: "‹\_précédent"
-            first: "«\_premier"
-            last: "dernier\_»"
+            next: 'next ›'
+            previous: '‹ previous'
+            first: '« first'
+            last: 'last »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Éléments par page'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Tout -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Décalage
+            offset_label: Offset
           quantity: 9
       exposed_form:
         type: basic
         options:
-          submit_button: Filtrer
+          submit_button: Filter
           reset_button: false
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -577,7 +577,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'Aucun commentaire disponible.'
+          content: 'No comments available.'
           tokenize: false
       sorts:
         changed:
@@ -654,7 +654,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Objet
+            label: Subject
             description: ''
             use_operator: false
             operator: subject_op
@@ -694,7 +694,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: "Nom de l'auteur"
+            label: 'Author name'
             description: ''
             use_operator: false
             operator: combine_op
@@ -739,7 +739,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Langue
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
@@ -859,7 +859,7 @@ display:
       show_admin_links: true
       use_more: false
       use_more_always: true
-      use_more_text: plus
+      use_more_text: more
       header: {  }
       footer: {  }
       hide_attachment_summary: false
@@ -876,7 +876,7 @@ display:
       cacheable: false
   page_published:
     id: page_published
-    display_title: 'Commentaires publiés'
+    display_title: 'Published comments'
     display_plugin: page
     position: 1
     display_options:
@@ -887,8 +887,8 @@ display:
       path: admin/content/comment
       menu:
         type: tab
-        title: Commentaires
-        description: 'Commentaires publiés'
+        title: Comments
+        description: 'Comments published'
         weight: 0
         menu_name: admin
         parent: ''
@@ -905,7 +905,7 @@ display:
       cacheable: false
   page_unapproved:
     id: page_unapproved
-    display_title: 'Commentaires non approuvés'
+    display_title: 'Unapproved comments'
     display_plugin: page
     position: 2
     display_options:
@@ -975,7 +975,7 @@ display:
           entity_type: comment
           entity_field: subject
           plugin_id: field
-          label: Objet
+          label: Subject
           exclude: false
           alter:
             alter_text: false
@@ -1105,7 +1105,7 @@ display:
           entity_type: comment
           entity_field: name
           plugin_id: field
-          label: Auteur
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -1169,7 +1169,7 @@ display:
           entity_type: comment
           entity_field: entity_id
           plugin_id: commented_entity
-          label: 'Posté sur'
+          label: 'Posted in'
           exclude: false
           alter:
             alter_text: false
@@ -1234,7 +1234,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: field
-          label: 'Mis à jour'
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -1282,7 +1282,7 @@ display:
             custom_date_format: ''
             timezone: ''
             tooltip:
-              date_format: ''
+              date_format: long
               custom_date_format: ''
             time_diff:
               enabled: false
@@ -1309,7 +1309,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Actions
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -1473,7 +1473,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Objet
+            label: Subject
             description: ''
             use_operator: false
             operator: subject_op
@@ -1513,7 +1513,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: "Nom de l'auteur"
+            label: 'Author Name'
             description: ''
             use_operator: false
             operator: combine_op
@@ -1558,7 +1558,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Langue
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1593,13 +1593,13 @@ display:
         fields: false
         filters: false
         filter_groups: false
-      display_description: 'La liste des commentaires non-approuvés.'
+      display_description: 'The unapproved comments listing.'
       display_extenders: {  }
       path: admin/content/comment/approval
       menu:
         type: tab
-        title: 'Commentaires non approuvés'
-        description: 'Commentaires non-approuvés'
+        title: 'Unapproved comments'
+        description: 'Comments unapproved'
         weight: 1
         menu_name: admin
         parent: ''

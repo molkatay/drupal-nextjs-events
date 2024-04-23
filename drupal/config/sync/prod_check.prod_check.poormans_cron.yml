@@ -1,0 +1,11 @@
+uuid: 65cf854d-8d33-4834-a7fa-a252951fbdf9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: x2803JvCXV58riezYrY2MvqaG4OpcAR4lodz2GBvrgo
+id: poormans_cron
+label: Cron
+plugin: poormans_cron
+configuration:
+  severity: 2

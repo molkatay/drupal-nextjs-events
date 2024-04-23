@@ -1,0 +1,13 @@
+uuid: 86d8da42-7402-4ebe-83d4-0e52c8e71b0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - dblog
+_core:
+  default_config_hash: b3mNeB8mfreOidSGPHXRcQbjNk-SwtcAW1OECUUjmCA
+id: dblog
+label: 'PHP errors'
+plugin: dblog
+configuration:
+  severity: 2

@@ -1,5 +1,5 @@
-uuid: cd7dc435-5467-4bfd-a53b-69e1acd51b1c
-langcode: fr
+uuid: 438a7797-8ccb-4192-b884-18e69d420e27
+langcode: en
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Identité du site'
+  label: 'Site branding'
   label_display: '0'
   provider: system
   use_site_logo: true

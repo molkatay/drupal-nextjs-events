@@ -64,5 +64,6 @@ $settings['reverse_proxy_addresses'] = array('127.0.0.1');
 $settings['trusted_host_patterns'] = [
   '^localhost$',
   '127\.0\.0\.1',
-  'decoupled-drupal.fr'
+  'druxt-events.com'
 ];
+

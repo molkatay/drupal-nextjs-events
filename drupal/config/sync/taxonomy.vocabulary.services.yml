@@ -1,8 +1,0 @@
-uuid: da46852d-92da-4652-91f4-842b17171717
-langcode: fr
-status: true
-dependencies: {  }
-name: Services
-vid: services
-description: ''
-weight: 0

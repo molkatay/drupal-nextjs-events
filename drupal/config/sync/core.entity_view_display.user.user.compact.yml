@@ -1,5 +1,5 @@
-uuid: 975c593a-fee3-4cf5-8c04-1a18d5682ab8
-langcode: fr
+uuid: 9f7077f5-02bb-41ba-8e1f-0127fba33ebf
+langcode: en
 status: true
 dependencies:
   config:
@@ -20,14 +20,12 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: content
       image_style: thumbnail
+      image_link: content
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
-  langcode: true
   member_for: true
-  search_api_excerpt: true

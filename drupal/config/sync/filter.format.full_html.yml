@@ -1,12 +1,12 @@
-uuid: 4191c120-c579-4759-b81d-8594c2695e33
-langcode: fr
+uuid: 6ddb41a9-68c7-4bb7-9fda-3bb5d68a863f
+langcode: en
 status: true
 dependencies:
   module:
     - editor
 _core:
-  default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
-name: 'HTML complet'
+  default_config_hash: vpZysv3RHJjhYzq7O_q5q8mVlHdrSzKELmXyiX6RtV0
+name: 'Full HTML'
 format: full_html
 weight: 2
 filters:
@@ -38,5 +38,5 @@ filters:
     id: filter_image_lazy_load
     provider: filter
     status: true
-    weight: 12
+    weight: 15
     settings: {  }

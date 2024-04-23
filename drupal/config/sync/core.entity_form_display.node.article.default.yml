@@ -1,11 +1,10 @@
-uuid: ba7c4b96-3660-4cdd-b82e-a908c9c08e88
-langcode: fr
+uuid: d250eed7-b8fa-4b67-a397-1635c99e4c10
+langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_caroussel
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.thumbnail
@@ -13,7 +12,6 @@ dependencies:
   module:
     - comment
     - image
-    - paragraphs
     - path
     - text
 _core:
@@ -45,24 +43,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_caroussel:
-    type: paragraphs
-    weight: 121
-    region: content
-    settings:
-      title: Paragraphe
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
   field_image:
     type: image_image
     weight: 1
@@ -80,13 +60,6 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
     third_party_settings: {  }
   path:
     type: path

@@ -1,5 +1,5 @@
-uuid: ded9800b-4c9b-4e43-a279-6ac6c8799385
-langcode: fr
+uuid: c363b857-c8e3-4677-a8d6-8b0f68aabae7
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.article.comment
 field_name: comment
 entity_type: node
 bundle: article
-label: Commentaires
+label: Comments
 description: ''
 required: false
 translatable: true

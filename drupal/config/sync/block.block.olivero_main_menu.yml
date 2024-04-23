@@ -1,5 +1,5 @@
-uuid: 683fe932-c21f-4fb8-8330-bf8f83d14fb0
-langcode: fr
+uuid: 6bc9d979-ae9d-4067-ac7e-df16299038fb
+langcode: en
 status: true
 dependencies:
   config:
@@ -18,7 +18,7 @@ provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Navigation principale'
+  label: 'Main navigation'
   label_display: '0'
   provider: system
   level: 1

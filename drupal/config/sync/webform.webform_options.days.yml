@@ -1,5 +1,5 @@
-uuid: 06a6faad-21ca-43c2-899f-1436c97a6180
-langcode: fr
+uuid: ba89786e-daba-4256-97a0-e30ef7126d98
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -9,7 +9,7 @@ _core:
   default_config_hash: YNrKbYrWWjeubUUM8AsQ19KnX7cU1elACR14CZJHmdg
 id: days
 label: Days
-category: 'Date et heure'
+category: 'Date and time'
 likert: false
 options: |
   Sunday: Sunday

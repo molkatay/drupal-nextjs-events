@@ -1,0 +1,11 @@
+uuid: a6c26768-a741-485d-8a00-e40b021c3d33
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZOlBmzfNGFC8uZ8kwdl3X2n8u5UG_Sk7o01sQj-iHmY
+id: css_aggregated
+label: 'Aggregate and compress CSS files.'
+plugin: css_aggregated
+configuration:
+  severity: 2

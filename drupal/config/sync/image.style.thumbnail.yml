@@ -1,11 +1,11 @@
-uuid: 8a7aec3f-f605-45de-8702-1b91100ef9a8
-langcode: fr
+uuid: a35beb79-8ab1-4a91-ae14-04897d645f44
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: cCiWdBHgLwj5omG35lsKc4LkW4MBdmcctkVop4ol5x0
 name: thumbnail
-label: 'Vignette (100x100)'
+label: 'Thumbnail (100×100)'
 effects:
   1cfec298-8620-4749-b100-ccb6c4500779:
     uuid: 1cfec298-8620-4749-b100-ccb6c4500779

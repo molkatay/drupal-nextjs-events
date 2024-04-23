@@ -1,27 +1,27 @@
-uuid: 0f6d0466-a3ec-4fd2-9d1d-af77ce2b46f8
-langcode: fr
+uuid: 02e93fef-fc39-469e-99bb-cfd45f29ada7
+langcode: en
 status: true
 dependencies:
   module:
     - block_content
     - user
 _core:
-  default_config_hash: jvd5Pu6jy-lra4oMr-mR7zuY6CVDv9CaNeoj0Y70gV4
+  default_config_hash: AcOE_1RLjX4okjWSOk7Pen1IdtPsY0Nbn0HXWG3zMqc
 id: block_content
-label: 'Custom block library'
+label: 'Content blocks'
 module: views
-description: 'Find and manage custom blocks.'
+description: 'Find and manage content blocks.'
 tag: default
 base_table: block_content_field_data
 base_field: id
 display:
   default:
     id: default
-    display_title: 'Par défaut'
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: 'Custom block library'
+      title: 'Content blocks'
       fields:
         info:
           id: info
@@ -33,7 +33,7 @@ display:
           entity_type: null
           entity_field: info
           plugin_id: field
-          label: 'Description du bloc'
+          label: 'Block description'
           exclude: false
           alter:
             alter_text: false
@@ -98,7 +98,7 @@ display:
           entity_type: block_content
           entity_field: type
           plugin_id: field
-          label: 'Type de bloc'
+          label: 'Block type'
           exclude: false
           alter:
             alter_text: false
@@ -163,7 +163,7 @@ display:
           entity_type: block_content
           entity_field: changed
           plugin_id: field
-          label: 'Mis à jour'
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -210,7 +210,7 @@ display:
             custom_date_format: ''
             timezone: ''
             tooltip:
-              date_format: ''
+              date_format: long
               custom_date_format: ''
             time_diff:
               enabled: false
@@ -227,7 +227,7 @@ display:
           admin_label: ''
           entity_type: block_content
           plugin_id: entity_operations
-          label: Actions
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -277,23 +277,23 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Suivant ›'
-            previous: '‹ Précédent'
+            next: 'Next ›'
+            previous: '‹ Previous'
           expose:
             items_per_page: false
-            items_per_page_label: 'Éléments par page'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Tout -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Décalage
+            offset_label: Offset
       exposed_form:
         type: basic
         options:
-          submit_button: Appliquer
+          submit_button: Apply
           reset_button: true
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -314,7 +314,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'There are no custom blocks available.'
+          content: 'There are no content blocks available.'
           tokenize: false
         block_content_listing_empty:
           id: block_content_listing_empty
@@ -346,7 +346,7 @@ display:
           exposed: true
           expose:
             operator_id: info_op
-            label: 'Description du bloc'
+            label: 'Block description'
             description: ''
             use_operator: false
             operator: info_op
@@ -388,7 +388,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Type de bloc'
+            label: 'Block type'
             description: ''
             use_operator: false
             operator: type_op
@@ -536,9 +536,8 @@ display:
       menu:
         type: tab
         title: Blocks
-        description: 'Create and edit block content.'
+        description: 'Create and edit content blocks.'
         weight: 0
-        expanded: false
         menu_name: admin
         parent: system.admin_content
         context: '0'

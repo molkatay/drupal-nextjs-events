@@ -1,5 +1,5 @@
-uuid: d8d69752-1180-4fd3-ae2f-3f8e704923be
-langcode: fr
+uuid: 0f76213f-adf1-4100-9941-7b43ad6e171e
+langcode: en
 status: true
 dependencies:
   config:
@@ -24,12 +24,6 @@ content:
   language:
     weight: 0
     region: content
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   timezone:
     weight: 6
     region: content
@@ -41,5 +35,4 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-hidden:
-  langcode: true
+hidden: {  }

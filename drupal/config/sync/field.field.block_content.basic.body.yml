@@ -1,5 +1,5 @@
-uuid: d827c0ad-0509-4691-96a9-d326b41ac51c
-langcode: fr
+uuid: 28dbc155-fb19-4a66-aafb-0464266f96a1
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,12 +8,12 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: foetbaMhlB6uLc2bn-PESvaPkbuDWj0MEjpQVwQiP-o
+  default_config_hash: j00Gfs9AFqwK4x9RIsISLbPO7vA12psPR4s60wOIwQo
 id: block_content.basic.body
 field_name: body
 entity_type: block_content
 bundle: basic
-label: Corps
+label: Body
 description: ''
 required: false
 translatable: true

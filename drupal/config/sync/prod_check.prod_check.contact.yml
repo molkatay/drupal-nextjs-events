@@ -1,0 +1,13 @@
+uuid: e66e9beb-bb16-4946-a5b9-f237b170e153
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+_core:
+  default_config_hash: NLPiejEvNqn3Z8tG9HNB-Q5iL1rlScI35BLBUaW60SQ
+id: contact
+label: Contact
+plugin: contact
+configuration:
+  severity: 2

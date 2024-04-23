@@ -1,13 +1,13 @@
-uuid: 9c976a4a-19cd-4c20-9571-3dc099732420
-langcode: fr
+uuid: 24e83a61-09b8-45db-9d2c-3fa8b65483ec
+langcode: en
 status: false
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: ElrtInxGjZd7GaapJ5O9n-ugi2hG2IxFivtgn0tHOsk
+  default_config_hash: QJ2aZ1xfVf59aq6Pz5X7fyUOa2HxuCoTwQ_RQjoulAU
 id: node.full
-label: 'Contenu complet'
+label: 'Full content'
 description: ''
 targetEntityType: node
 cache: true

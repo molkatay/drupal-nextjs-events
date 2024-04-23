@@ -1,5 +1,5 @@
-uuid: 13f43cb0-44c8-4c2c-874d-3b807051f997
-langcode: fr
+uuid: 5af85497-54fd-47a6-8b7b-036d3883942f
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,12 +8,12 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: TmAKjNrJ7RR60YpqvJq_QqEewYe_S8Kd23n8VRCqiWs
+  default_config_hash: 62rlTOx3sPVrYhBnSBHZStXwiO02v1UpHSMrhWDsuG8
 id: comment.comment.comment_body
 field_name: comment_body
 entity_type: comment
 bundle: comment
-label: Commentaire
+label: Comment
 description: ''
 required: true
 translatable: true

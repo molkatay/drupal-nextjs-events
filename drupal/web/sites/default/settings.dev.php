@@ -23,17 +23,15 @@ assert_options(ASSERT_ACTIVE, TRUE);
 # Database credentials.
 # ================================================================
 $databases['default']['default'] = array (
-  'database' => 'drupal',
+  'database' => 'druxt_events',
   'username' => 'drupal',
   'password' => 'drupal',
   'prefix' => '',
-  'host' => 'mariadb',
-  'port' => '3306',
-  'namespace' => 'Drupal\Core\Database\Driver\mysql',
-  'driver' => 'mysql',
-  'init_commands' => [
-    'isolation_level' => 'SET SESSION tx_isolation=\'READ-COMMITTED\'',
-  ],
+  'host' => 'db',
+  'port' => '5432',
+  'namespace' => 'Drupal\Core\Database\Driver\pgsql',
+  'driver' => 'pgsql',
+
   'collation' => 'utf8mb4_general_ci',
 );
 
@@ -46,9 +44,9 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/services.dev.yml'
 # Trusted host patterns.
 # ================================================================
 $settings['trusted_host_patterns'] = [
- # '^' . preg_quote('varnish.drupal.docker.localhost') . '$',
- # '^' . preg_quote('drupal.docker.localhost') . '$',
-  #'^web$'
+  '^' . preg_quote('varnish.druxt-events.com') . '$',
+  '^' . preg_quote('druxt-events.com') . '$',
+  '^web$'
 ];
 
 # ================================================================

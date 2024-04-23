@@ -1,5 +1,5 @@
-uuid: b649ebcc-ce8e-4c0a-9fc6-bfe85f3df93e
-langcode: fr
+uuid: a4804204-e7d4-4ffe-8b33-c43ea10d888e
+langcode: en
 status: true
 dependencies:
   enforced:
@@ -9,6 +9,6 @@ _core:
   default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
 id: translations
 label: Translations
-category: Langue
+category: Language
 likert: false
 options: ''

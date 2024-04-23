@@ -1,5 +1,5 @@
-uuid: a7a292eb-0317-4368-836e-2b4026dfdbab
-langcode: fr
+uuid: bd78bb61-559b-4a77-8f69-af83fd985dc9
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,12 +8,12 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: KgVkxLl_K3E3lvN6CEoWQIDT0V8J4Mv-fVYrAIc7-FE
+  default_config_hash: KHu9I-pR4FnP79crRJ5gVD_1mKGSZcJsdIm9bn64iFg
 id: node.page.body
 field_name: body
 entity_type: node
 bundle: page
-label: Corps
+label: Body
 description: ''
 required: false
 translatable: true

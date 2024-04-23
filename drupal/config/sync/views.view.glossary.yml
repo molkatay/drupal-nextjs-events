@@ -1,5 +1,5 @@
-uuid: cbd52272-a95b-4f48-94dc-daf01560fae1
-langcode: fr
+uuid: cc1ea775-db21-48af-8dd5-e3a8035b8f63
+langcode: en
 status: false
 dependencies:
   config:
@@ -8,18 +8,18 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: sz_FoMz5aClG4jFy4UDlkenXQtgTUXohEDjWVBuHaro
+  default_config_hash: nmnCpWLsIDkgaZEKlzl9uYT7NYEM_5uKzQtTbvkl878
 id: glossary
 label: Glossary
 module: node
-description: 'Tous les contenus, triés par lettre.'
+description: 'All content, by letter.'
 tag: default
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: 'Par défaut'
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -34,7 +34,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Titre
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -85,7 +85,7 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-          label: Auteur
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -137,7 +137,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: field
-          label: 'Dernière mise à jour'
+          label: 'Last update'
           exclude: false
           alter:
             alter_text: false
@@ -184,7 +184,7 @@ display:
             custom_date_format: ''
             timezone: ''
             tooltip:
-              date_format: ''
+              date_format: long
               custom_date_format: ''
             time_diff:
               enabled: false
@@ -204,19 +204,19 @@ display:
             previous: ‹‹
           expose:
             items_per_page: false
-            items_per_page_label: 'Éléments par page'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Tout -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Décalage
+            offset_label: Offset
       exposed_form:
         type: basic
         options:
-          submit_button: Appliquer
+          submit_button: Apply
           reset_button: false
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -386,7 +386,7 @@ display:
       tags: {  }
   attachment_1:
     id: attachment_1
-    display_title: 'Élément joint'
+    display_title: Attachment
     display_plugin: attachment
     position: 2
     display_options:

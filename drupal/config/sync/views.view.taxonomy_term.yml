@@ -1,5 +1,5 @@
-uuid: 34bd7700-243a-4780-9a8d-3feb6bf4826b
-langcode: fr
+uuid: b535cd6f-c5ff-4835-85c9-05569e4f9d6b
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,18 +9,18 @@ dependencies:
     - taxonomy
     - user
 _core:
-  default_config_hash: YKgw0f77GEmCu6_6Om9Mbig0mON9JdfVuMxTtd0WQaI
+  default_config_hash: z9csC6m3M65M2JczdNul_lMUrVg8ZO66pbSq8jPCBKs
 id: taxonomy_term
-label: 'Terme de taxonomie'
+label: 'Taxonomy term'
 module: taxonomy
-description: 'Contenu associé à un terme de taxonomie donné.'
+description: 'Content belonging to a certain taxonomy term.'
 tag: default
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: 'Par défaut'
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -37,19 +37,19 @@ display:
             previous: ‹‹
           expose:
             items_per_page: false
-            items_per_page_label: 'Éléments par page'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Tout -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Décalage
+            offset_label: Offset
       exposed_form:
         type: basic
         options:
-          submit_button: Appliquer
+          submit_button: Apply
           reset_button: false
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -102,7 +102,7 @@ display:
           exception:
             value: ''
             title_enable: false
-            title: Tout
+            title: All
           title_enable: true
           title: '{{ arguments.tid }}'
           default_argument_type: fixed
@@ -260,7 +260,7 @@ display:
       tags: {  }
   feed_1:
     id: feed_1
-    display_title: Flux
+    display_title: Feed
     display_plugin: feed
     position: 2
     display_options:

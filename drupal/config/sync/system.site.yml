@@ -1,9 +1,9 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
-langcode: fr
-uuid: 52381e64-92e9-4663-a651-5a2cd62f7308
-name: 'Decoupled drupal 10'
-mail: tayahi.molka@gmail.com
+langcode: en
+uuid: 0f3ed5d8-472d-4298-afbb-2b103b67bde5
+name: 'Drush Site-Install'
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
@@ -11,4 +11,4 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-default_langcode: fr
+default_langcode: en

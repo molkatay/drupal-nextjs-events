@@ -1,10 +1,10 @@
-uuid: bd381a08-f474-45fc-b498-dfc7ba4a65d4
-langcode: fr
+uuid: a8ef9b31-d639-4652-b4ac-9e5552d53084
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
 id: main
-label: 'Navigation principale'
-description: 'Liens de section du site'
+label: 'Main navigation'
+description: 'Site section links'
 locked: true

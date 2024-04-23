@@ -1,14 +1,14 @@
-uuid: eb0dcf50-aebe-440b-a9c7-6ef58e297afd
-langcode: fr
+uuid: 8d0ac613-a7b8-4d56-8b07-3634cecc89e3
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
 id: feedback
-label: 'Retours utilisateurs sur le site web'
+label: 'Website feedback'
 recipients:
-  - tayahi.molka@gmail.com
+  - admin@example.com
 reply: ''
 weight: 0
-message: 'Votre message a été envoyé.'
+message: 'Your message has been sent.'
 redirect: ''
