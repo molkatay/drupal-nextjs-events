@@ -1,0 +1,68 @@
+uuid: eb1935f0-9358-4a12-b920-fd27ffa4901f
+langcode: en
+status: true
+dependencies:
+  config:
+    - custom_event.event_type.event
+    - field.field.event.event.field_date
+    - field.field.event.event.field_location
+  module:
+    - datetime
+    - text
+id: event.event.default
+targetEntityType: event
+bundle: event
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_location:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

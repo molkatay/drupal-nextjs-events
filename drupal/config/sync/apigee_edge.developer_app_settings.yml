@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: vKC2q9K1ErwHw_WTZ4RllLPvCwplS7-FQ5gMqVPoiss
+langcode: en
+entity_label_singular: App
+entity_label_plural: Apps
+cache_expiration: 900
+credential_lifetime: 0
+locked_base_fields:
+  - displayName
+required_base_fields:
+  - displayName

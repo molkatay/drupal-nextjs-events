@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: cIMvnlNx9ps4NB-Zbfea8FCIikY8EBsJ2QiJ-kxHMYE
+langcode: en
+entity_label_singular: ''
+entity_label_plural: ''
+cache_expiration: 900
+access:
+  public:
+    - anonymous
+    - authenticated
+  private:
+    - authenticated
+  internal: {  }

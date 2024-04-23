@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: k8IHdAQdw4tE74jPYyd8LGjY0mbjOBGrj5bBzhGISf8
+http_client_connect_timeout: 30
+http_client_timeout: 30
+http_client_proxy: ''

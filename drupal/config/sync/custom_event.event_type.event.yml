@@ -1,0 +1,6 @@
+uuid: fd701e8b-cb38-4f65-a22f-5841995ae468
+langcode: en
+status: true
+dependencies: {  }
+id: event
+label: Event

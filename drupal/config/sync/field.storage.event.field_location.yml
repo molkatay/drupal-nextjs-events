@@ -1,0 +1,27 @@
+uuid: f0909353-a0c0-4d9a-83a0-473d8a3bdaef
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_event
+    - options
+id: event.field_location
+field_name: field_location
+entity_type: event
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: online
+      label: 'On site'
+    -
+      value: remote
+      label: Remote
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

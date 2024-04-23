@@ -1,0 +1,11 @@
+event.type_add:
+  title: 'Add event type'
+  route_name: entity.event_type.add_form
+  appears_on:
+    - entity.event_type.collection
+
+event.add_page:
+  title: 'Add event'
+  route_name: entity.event.add_page
+  appears_on:
+    - entity.event.collection

@@ -38,6 +38,7 @@
         "drupal/jsonapi_extras": "^3.23",
         "drupal/jsonapi_menu_items": "^1.2",
         "drupal/jsonapi_resources": "^1.0@beta",
+        "drupal/leaflet": "^10.2",
         "drupal/libraries": "^4.0",
         "drupal/login_security": "^2.0",
         "drupal/matomo": "^1.23",

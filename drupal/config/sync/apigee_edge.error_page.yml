@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: 4jFKRCvaDbYRDLOUuhAfNfLlB8id04kCiW8AoE9ud8o
+langcode: en
+error_page_title: 'Connection error'
+error_page_content:
+  value: 'Cannot reach management server. An administrator should check the configuration of this site.'
+  format: plain_text
+error_page_debug_messages: true
