@@ -29,9 +29,9 @@ $databases['default']['default'] = array (
   'prefix' => '',
   'host' => 'db',
   'port' => '5432',
-  'namespace' => 'Drupal\Core\Database\Driver\pgsql',
+  'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
   'driver' => 'pgsql',
-
+  'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
   'collation' => 'utf8mb4_general_ci',
 );
 

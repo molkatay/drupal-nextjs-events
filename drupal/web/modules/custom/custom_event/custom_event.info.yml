@@ -1,5 +1,0 @@
-name: 'Custom Event'
-type: module
-description: 'Manage events'
-package: Custom
-core_version_requirement: ^10

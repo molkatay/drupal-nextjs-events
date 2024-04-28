@@ -1,0 +1,14 @@
+uuid: 3a9d10d6-2afa-4455-9819-80d86badfd3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.event_manager
+  module:
+    - user
+id: user_remove_role_action.event_manager
+label: 'Remove the Event Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: event_manager
