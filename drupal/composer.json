@@ -61,7 +61,6 @@
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
         "drupal/restui": "^1.21",
-        "drupal/rules": "^3.0@alpha",
         "drupal/search_api": "^1.31",
         "drupal/search_api_solr": "^4.3",
         "drupal/security_review": "^3.0@RC",
