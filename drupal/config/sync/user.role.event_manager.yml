@@ -1,0 +1,21 @@
+uuid: d77e0311-b3a4-4dac-97fb-d2635bcf9996
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - node
+id: event_manager
+label: 'Event Manager'
+weight: 4
+is_admin: null
+permissions:
+  - 'create event content'
+  - 'delete any event content'
+  - 'delete event revisions'
+  - 'delete own event content'
+  - 'edit any event content'
+  - 'edit own event content'
+  - 'revert event revisions'
+  - 'view event revisions'
