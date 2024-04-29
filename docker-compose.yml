@@ -28,7 +28,7 @@ services:
       - 5432:5432
     volumes:
       - ./.docker/conf/postgres/:/docker-entrypoint-initdb.d/
-      - postgresql:/var/lib/postgresql
+      - postgres-data:/var/lib/postgresql/data
   traefik:
     image: traefik:v2.0
     command: --api.insecure=true --providers.docker
@@ -41,7 +41,10 @@ services:
   node:
     labels:
       - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"
+      - "traefik.http.services.${PROJECT_NAME}_node.loadbalancer.server.port=3000"
     image: druxt-events-app
+    expose:
+      - "3000"
     build:
       context: ./react
       target: dev
@@ -51,4 +54,4 @@ services:
       - /app/node_modules
       - /app/.next
 volumes:
-  postgresql: {}
+  postgres-data: {}
