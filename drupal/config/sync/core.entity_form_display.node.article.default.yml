@@ -1,4 +1,4 @@
-uuid: d250eed7-b8fa-4b67-a397-1635c99e4c10
+uuid: 089bd86c-b01a-4487-9de0-dca7e0502343
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,10 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.thumbnail
     - node.type.article
   module:
     - comment
-    - image
+    - media_library
     - path
     - text
 _core:
@@ -44,12 +43,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: image_image
-    weight: 1
+    type: media_library_widget
+    weight: 122
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags

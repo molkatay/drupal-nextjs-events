@@ -1,4 +1,4 @@
-uuid: 732b1995-2b7a-4669-a673-6afd73273793
+uuid: 520d8f11-937e-47e5-b74f-460c07b19481
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
     - field.field.node.event.field_event_date
-    - field.field.node.event.field_media_image
-    - field.field.node.event.field_regisration
+    - field.field.node.event.field_image
+    - field.field.node.event.field_registration
     - node.type.event
   module:
     - text
@@ -32,7 +32,5 @@ content:
     region: content
 hidden:
   field_event_date: true
-  field_media_image: true
-  field_regisration: true
-  langcode: true
-  search_api_excerpt: true
+  field_image: true
+  field_registration: true

@@ -1,17 +1,17 @@
-uuid: d32e85e9-f47a-4eeb-a45a-150247d7827b
+uuid: a4354b95-06f4-4722-b5d8-38dc005326b9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_regisration
+    - field.storage.node.field_registration
     - node.type.event
   module:
     - webform
-id: node.event.field_regisration
-field_name: field_regisration
+id: node.event.field_registration
+field_name: field_registration
 entity_type: node
 bundle: event
-label: Regisration
+label: Registration
 description: ''
 required: false
 translatable: false

@@ -1,12 +1,12 @@
-uuid: 83bfd4c6-0c10-4167-9acb-c4eec24aa0de
+uuid: 6b91dd3a-3786-40a9-8680-07fedb0411df
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_event_date
-    - field.field.node.event.field_media_image
-    - field.field.node.event.field_regisration
+    - field.field.node.event.field_image
+    - field.field.node.event.field_registration
     - node.type.event
   module:
     - datetime
@@ -34,7 +34,7 @@ content:
     third_party_settings: {  }
     weight: 103
     region: content
-  field_media_image:
+  field_image:
     type: entity_reference_entity_view
     label: above
     settings:
@@ -43,7 +43,7 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
-  field_regisration:
+  field_registration:
     type: webform_entity_reference_link
     label: above
     settings:
@@ -58,6 +58,4 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden:
-  langcode: true
-  search_api_excerpt: true
+hidden: {  }

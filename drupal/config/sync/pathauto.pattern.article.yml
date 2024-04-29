@@ -1,4 +1,4 @@
-uuid: f9a4ed17-bfae-46f9-aab6-d777ce77ab89
+uuid: 9e19737f-55e1-45ae-825c-8c716796c3da
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ label: Article
 type: 'canonical_entities:node'
 pattern: 'blog/[node:title]'
 selection_criteria:
-  21128ad5-9e25-44bc-9020-fbfbf6fd7caf:
+  be770113-d7c2-47e7-9117-0277ddec6121:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 21128ad5-9e25-44bc-9020-fbfbf6fd7caf
+    uuid: be770113-d7c2-47e7-9117-0277ddec6121
     context_mapping:
       node: node
     bundles:

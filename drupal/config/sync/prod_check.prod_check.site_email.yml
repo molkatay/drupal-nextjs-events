@@ -1,8 +1,0 @@
-uuid: b3ddd1fb-c8d6-4b90-ac7e-1289a16a6065
-langcode: en
-status: true
-dependencies: {  }
-id: site_email
-label: 'Website email'
-plugin: site_email
-configuration: {  }

@@ -1,4 +1,4 @@
-uuid: ece4040e-7792-4fce-b1ac-66a188e2244a
+uuid: 55102b97-fddd-478d-be8e-bf49766751f4
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ label: Event
 type: 'canonical_entities:node'
 pattern: 'event/[node:title]'
 selection_criteria:
-  dafa1eff-9722-4f4e-a47b-62d4e83899c7:
+  2c159e66-1a6f-4385-ad80-16f798ab6952:
     id: 'entity_bundle:node'
     negate: false
-    uuid: dafa1eff-9722-4f4e-a47b-62d4e83899c7
+    uuid: 2c159e66-1a6f-4385-ad80-16f798ab6952
     context_mapping:
       node: node
     bundles:
