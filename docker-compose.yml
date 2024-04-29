@@ -45,6 +45,8 @@ services:
     image: druxt-events-app
     expose:
       - "3000"
+    depends_on:
+      - php
     build:
       context: ./react
       target: dev

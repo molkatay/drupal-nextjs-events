@@ -29,6 +29,7 @@ export default function NodePage({ resource }: NodePageProps) {
 }
 
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
+
   return {
     paths: await drupal.getStaticPathsFromContext(RESOURCE_TYPES, context),
     fallback: "blocking",
