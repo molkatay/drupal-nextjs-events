@@ -1,4 +1,4 @@
-uuid: 575f74d4-5811-4e41-8bb5-bbee44da68cd
+uuid: a6d44862-2642-4e9f-9881-7b00754f5739
 langcode: en
 status: open
 dependencies:
@@ -15,20 +15,20 @@ template: false
 archive: false
 id: event_registration
 title: 'Event Registration'
-description: '<p>Event registration form.</p>'
+description: '<p>A demonstration of an event registration form.</p>'
 categories: {  }
-elements: |
+elements: |-
   event_information:
     '#type': fieldset
     '#title': 'Event Information'
     event_title:
       '#type': webform_computed_token
       '#title': 'Event Title'
-      '#value': '[webform_submission:node:title]'
+      '#template': '[webform_submission:node:title]'
     event_date:
       '#type': webform_computed_token
       '#title': 'Event Date'
-      '#value': '[webform_submission:node:field_webform_demo_event_date:date:short]'
+      '#template': '[webform_submission:node:field_webform_demo_event_date:date:short]'
   information:
     '#title': 'Your Information'
     '#type': fieldset

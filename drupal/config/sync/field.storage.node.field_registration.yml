@@ -1,17 +1,17 @@
-uuid: a517a6b3-bb07-4d11-9077-ef55b9d142cf
+uuid: b0bb5103-5d4e-49e3-8f35-e4cbfc589ea8
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - node
-id: node.field_media_image
-field_name: field_media_image
+    - webform
+id: node.field_registration
+field_name: field_registration
 entity_type: node
-type: entity_reference
+type: webform
 settings:
-  target_type: media
-module: core
+  target_type: webform
+module: webform
 locked: false
 cardinality: 1
 translatable: true

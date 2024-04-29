@@ -1,23 +1,53 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18-alpine
-
-# Set the working directory to /app
+FROM node:18-alpine as base
+#RUN apk add --no-cache g++ make py3-pip libc6-compat
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
-
-# Install the project dependencies
-RUN npm install
-
-# Copy the contents of the local src directory to the working directory
-COPY . .
-
-# Build the Next.js application
-RUN npm run build
-
-# Expose the port that Next.js will run on
 EXPOSE 3000
 
-# Define the command to run your application
-CMD ["npm", "start"]
+FROM base as builder
+WORKDIR /app
+COPY . .
+RUN npm run build
+
+FROM base as production
+WORKDIR /app
+
+ENV NODE_ENV=production
+RUN npm ci
+
+# Create a non-root user
+RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001 -G nodejs
+
+# Set ownership for /app directory
+RUN chown -R nextjs:nodejs /app
+
+USER nextjs
+
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/public ./public
+
+CMD npm start
+
+# Add dev stage
+FROM base as dev
+ENV NODE_ENV=development
+
+# Install packages as root
+USER root
+RUN apk add --no-cache g++ make py3-pip libc6-compat
+RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001 -G nodejs
+# Set ownership for /app directory
+RUN chown -R nextjs:nodejs /app
+USER nextjs
+
+
+# Install npm packages
+RUN npm install
+
+# Copy the rest of the files
+COPY . .
+
+# Start the development server
+CMD npm run dev
