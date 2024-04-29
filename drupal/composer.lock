@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "039ad7876be5acbb4c4ceee090e7e574",
+    "content-hash": "4d602516b8d9ca6e190ea814bcf234a7",
     "packages": [
         {
             "name": "apigee/apigee-client-php",
@@ -2901,6 +2901,62 @@
             "time": "2024-04-03T07:19:20+00:00"
         },
         {
+            "name": "drupal/cors_ui",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cors_ui.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cors_ui-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "c6e34f5cd21ec76af332042142bb8a4308f3cde7"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1712765391",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aurelianzaha",
+                    "homepage": "https://www.drupal.org/user/3575026"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "A user interface for CORS handling in Drupal.",
+            "homepage": "https://www.drupal.org/project/cors_ui",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cors_ui"
+            }
+        },
+        {
             "name": "drupal/ctools",
             "version": "4.0.4",
             "source": {
@@ -2991,6 +3047,88 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/decoupled_preview",
+            "version": "1.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/decoupled_preview.git",
+                "reference": "1.0.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/decoupled_preview-1.0.0-beta5.zip",
+                "reference": "1.0.0-beta5",
+                "shasum": "604966fe690e77d8dda29c181d0fee266af1941b"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/decoupled_router": "2.0.4",
+                "drupal/jsonapi_resources": "^1.0@beta",
+                "drupal/simple_oauth": "*"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "4.0.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta5",
+                    "datestamp": "1701730456",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches": {
+                    "drupal/decoupled_router": {
+                        "3111456#59: Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2022-12-01/decouple_router-3111456-resolve-language-issue-58--get-translation.patch"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "post-update-cmd": [
+                    "./scripts/composer/project-tasks"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "abhisekmazumdar",
+                    "homepage": "https://www.drupal.org/user/3557964"
+                },
+                {
+                    "name": "brianperry",
+                    "homepage": "https://www.drupal.org/user/2304500"
+                },
+                {
+                    "name": "coby.sher",
+                    "homepage": "https://www.drupal.org/user/3705573"
+                },
+                {
+                    "name": "greg.1.anderson",
+                    "homepage": "https://www.drupal.org/user/438598"
+                },
+                {
+                    "name": "mitchellmarkoff",
+                    "homepage": "https://www.drupal.org/user/3729954"
+                }
+            ],
+            "description": "Preview Drupal content on your decoupled site.",
+            "homepage": "https://www.drupal.org/project/decoupled_preview",
+            "keywords": [
+                "Drupal",
+                "decoupled",
+                "preview"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/decoupled_preview",
+                "issues": "https://www.drupal.org/project/issues/decoupled_preview"
             }
         },
         {
@@ -17475,6 +17613,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/content_language_access": 10,
+        "drupal/decoupled_preview": 10,
         "drupal/entity_usage": 10,
         "drupal/hook_event_dispatcher": 10,
         "drupal/imageapi_optimize_binaries": 10,

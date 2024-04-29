@@ -1,9 +1,9 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: 3a4bceb9-0ad0-4c4d-bc1b-209cb97e285e
-name: 'Drush Site-Install'
-mail: admin@example.com
+uuid: a9654a9b-3c64-44e3-b854-7025c9129d3b
+name: 'Drupal events Backoffice'
+mail: tayahi.molka@gmail.com
 slogan: ''
 page:
   403: ''

@@ -28,6 +28,7 @@ services:
       - 5432:5432
     volumes:
       - ./.docker/conf/postgres/:/docker-entrypoint-initdb.d/
+      - postgresql:/var/lib/postgresql
   traefik:
     image: traefik:v2.0
     command: --api.insecure=true --providers.docker
@@ -49,3 +50,5 @@ services:
       - ./react:/app
       - /app/node_modules
       - /app/.next
+volumes:
+  postgresql: {}
