@@ -1,0 +1,11 @@
+enabled: true
+allowedHeaders:
+  - '*'
+allowedMethods:
+  - '*'
+allowedOrigins:
+  - '*'
+exposedHeaders:
+  - '*'
+maxAge: null
+supportsCredentials: false

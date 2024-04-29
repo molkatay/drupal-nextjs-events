@@ -1,0 +1,11 @@
+uuid: 98967eeb-7377-49dc-8a16-b4d755063678
+langcode: en
+status: true
+dependencies: {  }
+id: next_js_app
+label: 'Next JS App'
+base_url: 'http://node.druxt-events.com:8000/'
+preview_url: 'http://node.druxt-events.com:8000/api/preview'
+preview_secret: secret
+revalidate_url: ''
+revalidate_secret: ''

@@ -27,6 +27,8 @@
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/cors_ui": "^1.2",
+        "drupal/decoupled_preview": "^1.0@beta",
         "drupal/devel": "^5.0",
         "drupal/dotenv": "^1.2",
         "drupal/entity_usage": "^2.0@beta",
