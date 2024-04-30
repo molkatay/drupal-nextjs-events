@@ -33,28 +33,28 @@ require_once $app_root . '/' . $site_path . '/settings.' . $environment . '.php'
  *
  * Configuration Redis for the cache
  **/
-//try {
-//  $redis = new Redis();
-//  $redis->connect('Redis', 6379);
-//  if ($redis->IsConnected()) {
-//    $redis->auth(NULL);
-//    $response = $redis->ping();
-//    if ($response) {
-//      # Configuration Redis for the cache
-//      $settings['redis.connection']['host'] = 'redis';
-//      $settings['redis.connection']['password'] = NULL;
-//      $settings['redis.connection']['port'] = '6379';
-//      $settings['redis.connection']['instance'] = 'cache';
-//      $settings['redis.connection']['interface'] = 'PhpRedis';
-//      $settings['cache']['default'] = 'cache.backend.redis';
-//      $settings['container_yamls'][] = 'modules/redis/example.services.yml';
-//      $conf['redis_perm_ttl'] = 2592000;
-//      $settings['redis_compress_length'] = 100;
-//      $settings['redis_compress_level'] = 3;
-//    }
-//  }
-//} catch (Exception $e) {
-//}
+try {
+  $redis = new Redis();
+  $redis->connect('Redis', 6379);
+  if ($redis->IsConnected()) {
+    $redis->auth(NULL);
+    $response = $redis->ping();
+    if ($response) {
+      # Configuration Redis for the cache
+      $settings['redis.connection']['host'] = 'redis';
+      $settings['redis.connection']['password'] = NULL;
+      $settings['redis.connection']['port'] = '6379';
+      $settings['redis.connection']['instance'] = 'cache';
+      $settings['redis.connection']['interface'] = 'PhpRedis';
+      $settings['cache']['default'] = 'cache.backend.redis';
+      $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';
+      $conf['redis_perm_ttl'] = 2592000;
+      $settings['redis_compress_length'] = 100;
+      $settings['redis_compress_level'] = 3;
+    }
+  }
+} catch (Exception $e) {
+}
 
 $settings['reverse_proxy'] = TRUE;
 
@@ -66,4 +66,4 @@ $settings['trusted_host_patterns'] = [
   '127\.0\.0\.1',
   'druxt-events.com'
 ];
-
+$settings['update_free_access']= FALSE;

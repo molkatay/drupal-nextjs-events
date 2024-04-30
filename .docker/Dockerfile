@@ -60,6 +60,9 @@ RUN pecl install xdebug
 # Install the PHP zip extention
 RUN docker-php-ext-install zip
 
+# Install Redis extension for PHP
+RUN pecl install redis && \
+    docker-php-ext-enable redis
 #####################################
 # Composer
 #####################################

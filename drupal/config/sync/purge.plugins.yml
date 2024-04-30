@@ -1,0 +1,5 @@
+purgers:
+  -
+    instance_id: b8d2622937
+    plugin_id: http
+    order_index: 2
