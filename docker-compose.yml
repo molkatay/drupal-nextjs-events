@@ -62,10 +62,11 @@ services:
     image: varnish:7.4
     volumes:
       - .docker/varnish/default.vcl:/etc/varnish/default.vcl:ro
-    command: [ "varnishd", "-F", "-f", "/etc/varnish/default.vcl", "-a", "0.0.0.0:8080", "-s", "malloc,256m" ]
     labels:
-      - "traefik.http.services.${PROJECT_NAME}_varnish.loadbalancer.server.port=6081"
       - "traefik.http.routers.${PROJECT_NAME}_varnish.rule=Host(`varnish.${PROJECT_BASE_URL}`)"
+      - traefik.enable=true
+      - traefik.http.routers.varnish-http.entrypoints=web
+      - traefik.http.services.varnish.loadbalancer.server.port=80
   redis:
     image: redis:latest
     restart: unless-stopped

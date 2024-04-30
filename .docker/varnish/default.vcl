@@ -14,10 +14,6 @@ backend default {
 # Here you need to put the IP address of your web server.
 acl internal {
   "127.0.0.1";
-  "10.10.9.80";
-  "10.10.9.83";
-  "10.10.9.1";
-  "172.18.0.3";
 }
 
 # Respond to incoming requests.
