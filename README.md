@@ -9,7 +9,8 @@ This Docker Compose configuration lets you run easily PHP 8.2 with Nginx, PHP-FP
 - php (PHP 8.2 with PHP-FPM)
 - db (PostgreSQL 15)
 - Varnish
-
+- Redis
+- Solr
 The PHP image comes with the most commonly used extensions and is configured with xdebug. 
 The UUID extension for PostgreSQL has been added. 
 Nginx default configuration is set up for Drupal 10.

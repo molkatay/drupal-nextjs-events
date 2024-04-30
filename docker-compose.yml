@@ -10,6 +10,7 @@ services:
     depends_on:
       - php
       - db
+      - redis
   php:
     build: .docker
     restart: always
@@ -55,5 +56,26 @@ services:
       - ./react:/app
       - /app/node_modules
       - /app/.next
+  varnish:
+    depends_on:
+      - web
+    image: varnish:7.4
+    volumes:
+      - .docker/varnish/default.vcl:/etc/varnish/default.vcl:ro
+    command: [ "varnishd", "-F", "-f", "/etc/varnish/default.vcl", "-a", "0.0.0.0:8080", "-s", "malloc,256m" ]
+    labels:
+      - "traefik.http.services.${PROJECT_NAME}_varnish.loadbalancer.server.port=6081"
+      - "traefik.http.routers.${PROJECT_NAME}_varnish.rule=Host(`varnish.${PROJECT_BASE_URL}`)"
+  redis:
+    image: redis:latest
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/bitnami/redis/data
+    environment:
+      ALLOW_EMPTY_PASSWORD: 'yes'
 volumes:
   postgres-data: {}
+  redis: {}

@@ -80,7 +80,8 @@
         "drupal/xmlsitemap": "^1.5",
         "drush/drush": "^12",
         "mnsami/composer-custom-directory-installer": "^2.0",
-        "theodo-group/llphant": "^0.6.0"
+        "theodo-group/llphant": "^0.6.0",
+        "ext-redis": "*"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -138,9 +139,6 @@
         "patches": {
             "drupal/subrequests": {
                 "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
-            },
-            "drupal/decoupled_router": {
-                "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2022-11-30/decouple_router-3111456-resolve-language-issue-58.patch"
             },
             "drupal/restui": {
                 "Use the ModuleHandlerInterface instead of the ModuleHandler concrete implementation": "https://www.drupal.org/files/issues/2023-01-09/restui-use-moduleHandlerInterface-3327681-04.patch"
