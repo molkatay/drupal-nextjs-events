@@ -3,3 +3,7 @@ purgers:
     instance_id: b8d2622937
     plugin_id: http
     order_index: 2
+  -
+    instance_id: 08dde689d4
+    plugin_id: http
+    order_index: 3
