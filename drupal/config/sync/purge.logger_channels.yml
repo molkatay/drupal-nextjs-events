@@ -21,3 +21,9 @@ channels:
       - 0
       - 2
       - 3
+  -
+    id: purger_http_08dde689d4
+    grants:
+      - 0
+      - 2
+      - 3
