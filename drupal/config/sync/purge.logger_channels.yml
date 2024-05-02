@@ -14,6 +14,7 @@ channels:
   -
     id: diagnostics
     grants:
+      - 0
       - 3
   -
     id: purger_http_b8d2622937

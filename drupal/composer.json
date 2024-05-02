@@ -15,9 +15,11 @@
         }
     ],
     "require": {
+        "ext-redis": "*",
         "composer/installers": "^2.2",
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/adv_varnish": "^4.0",
         "drupal/apigee_edge": "^3.0",
         "drupal/autologout": "^1.4",
         "drupal/big_pipe_sessionless": "^2.2",
@@ -80,8 +82,7 @@
         "drupal/xmlsitemap": "^1.5",
         "drush/drush": "^12",
         "mnsami/composer-custom-directory-installer": "^2.0",
-        "theodo-group/llphant": "^0.6.0",
-        "ext-redis": "*"
+        "theodo-group/llphant": "^0.6.0"
     },
     "conflict": {
         "drupal/drupal": "*"

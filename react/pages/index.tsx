@@ -51,6 +51,7 @@ export default function IndexPage({ menus, nodes, users }: IndexPageProps) {
 export async function getStaticProps(
     context
 ): Promise<GetStaticPropsResult<IndexPageProps>> {
+
     const nodes = await drupal.getResourceCollectionFromContext<DrupalNode[]>(
         "node--article",
         context,

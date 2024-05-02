@@ -31,21 +31,25 @@ services:
       - ./.docker/conf/postgres/:/docker-entrypoint-initdb.d/
       - postgres-data:/var/lib/postgresql/data
   traefik:
-    image: traefik:v2.0
-    command: --api.insecure=true --providers.docker
+    image: traefik:v2.2
+    command:
+      - "--providers.docker"
+      - "--accesslog=true"
+      - "--api.insecure=true"
+      - "--accesslog.filePath=/logs/access.log"
     ports:
       - "${PROJECT_PORT}:80"
       - '8080:8080' # Dashboard
       - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs/:/logs/
+
   node:
     labels:
       - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"
       - "traefik.http.services.${PROJECT_NAME}_node.loadbalancer.server.port=3000"
     image: druxt-events-app
-    expose:
-      - "3000"
     depends_on:
       - php
     build:
@@ -63,9 +67,7 @@ services:
     volumes:
       - .docker/varnish/default.vcl:/etc/varnish/default.vcl:ro
     labels:
-      - "traefik.http.services.${PROJECT_NAME}_varnish.loadbalancer.server.port=6081"
       - "traefik.http.routers.${PROJECT_NAME}_varnish.rule=Host(`varnish.${PROJECT_BASE_URL}`)"
-
   redis:
     image: redis:latest
     tty: true

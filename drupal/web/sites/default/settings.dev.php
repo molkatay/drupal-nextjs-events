@@ -46,7 +46,9 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/services.dev.yml'
 $settings['trusted_host_patterns'] = [
   '^' . preg_quote('varnish.druxt-events.com') . '$',
   '^' . preg_quote('druxt-events.com') . '$',
-  '^web$'
+  '^web$',
+  '^varnish$'
+
 ];
 
 # ================================================================

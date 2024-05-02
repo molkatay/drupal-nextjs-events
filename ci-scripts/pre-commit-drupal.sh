@@ -34,8 +34,8 @@ if ! command -v $PHPUNIT_BIN &> /dev/null; then
     echo "[PRE-COMMIT] Please run 'composer install' or check the path: $PHPUNIT_BIN"
     exit 1
 fi
-ESLINT="docker run --rm -v $(pwd):/app -w /app deploy_dev_env_drupal ./drupal-docker/drupal-src/node_modules/.bin/eslint"
-ESLINT="./drupal-docker/drupal-src/node_modules/.bin/eslint"
+ESLINT="docker run --rm -v $(pwd):/app -w /app deploy_dev_env_drupal ./drupal/node_modules/.bin/eslint"
+ESLINT="./drupal/node_modules/.bin/eslint"
 
 
 
@@ -70,7 +70,7 @@ for FILE in $STAGED_FILES; do
             echo "[PRE-COMMIT] No errors found."
         fi
 
-        file_to_analyse=${FILE//"drupal-docker/drupal-src/"/}
+        file_to_analyse=${FILE//"drupal/"/}
         #Run PHPSTAN
         $PHPSTAN_BIN analyse $file_to_analyse --error-format=json --no-progress --ansi
         if [ $? -ne 0 ]; then

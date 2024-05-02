@@ -1,7 +1,6 @@
 vcl 4.1;
 
 import std;
-
 backend default {
   .host                   = "web";
   .port                   = "80";
@@ -12,13 +11,15 @@ backend default {
 
 # Add hostnames, IP addresses and subnets that are allowed to purge content
 acl purge {
-    "localhost";
     "127.0.0.1";
-   "::1";
+    "::1";
 }
 
 sub vcl_recv {
     # Announce support for Edge Side Includes by setting the Surrogate-Capability header
+        std.log("Request URL: " + req.url);
+        std.log("Request Host: " + req.http.Host);
+        // Add more logging as needed
     set req.http.Surrogate-Capability = "Varnish=ESI/1.0";
 
     # Remove empty query string parameters
@@ -48,6 +49,8 @@ sub vcl_recv {
 
     # Ban logic to remove multiple objects from the cache at once. Tailored to Drupal's cache invalidation mechanism
     if(req.method == "BAN") {
+        std.log("Client IP: " + client.ip);
+
         if(!client.ip ~ purge) {
             return(synth(405, "BAN not allowed for this IP address"));
         }
@@ -140,6 +143,8 @@ sub vcl_hash {
 }
 
 sub vcl_backend_response {
+    std.log("Backend Response: " + beresp.status);
+
     # Inject URL & Host header into the object for asynchronous banning purposes
     set beresp.http.x-url = bereq.url;
     set beresp.http.x-host = bereq.http.host;
@@ -168,6 +173,8 @@ sub vcl_backend_response {
 }
 
 sub vcl_deliver {
+    std.log("Delivering Response: " + resp.status);
+
     # Cleanup of headers
     unset resp.http.x-url;
     unset resp.http.x-host;
