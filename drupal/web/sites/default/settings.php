@@ -60,10 +60,10 @@ $settings['reverse_proxy'] = TRUE;
 
 // Modifier l'IP si Varnish n'est pas sur le même serveur.
 $settings['reverse_proxy_addresses'] = array('127.0.0.1');
-
+/*
 $settings['trusted_host_patterns'] = [
   '^localhost$',
   '127\.0\.0\.1',
   'druxt-events.com'
-];
+];*/
 $settings['update_free_access']= FALSE;

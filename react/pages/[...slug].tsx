@@ -19,6 +19,7 @@ export default function NodePage({ resource }: NodePageProps) {
   return (
     <Layout>
       <Head>
+
         <title>{resource.title}</title>
         <meta name="description" content="A Next.js site powered by Drupal." />
       </Head>

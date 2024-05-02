@@ -11,6 +11,7 @@ interface NodeArticleTeaserProps {
 export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
   return (
     <article {...props}>
+        console.log(node);
       <Link href={node.path.alias} className="no-underline hover:text-blue-600">
         <h2 className="mb-4 text-4xl font-bold">{node.title}</h2>
       </Link>
@@ -23,13 +24,13 @@ export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
         ) : null}
         <span> - {formatDate(node.created)}</span>
       </div>
-      {node.field_image && (
+      {node.field_image2 && (
         <figure className="my-4">
           <Image
-            src={absoluteUrl(node.field_image.uri.url)}
+            src={absoluteUrl(node.field_image2.uri.url)}
             width={768}
             height={480}
-            alt={node.field_image.resourceIdObjMeta.alt}
+            alt={node.field_image2.resourceIdObjMeta.alt}
           />
         </figure>
       )}

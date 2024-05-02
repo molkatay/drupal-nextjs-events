@@ -37,6 +37,8 @@ ENV NODE_ENV=development
 # Install packages as root
 USER root
 RUN apk add --no-cache g++ make py3-pip libc6-compat
+RUN apk --no-cache add curl
+
 RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001 -G nodejs
 # Set ownership for /app directory
 RUN chown -R nextjs:nodejs /app

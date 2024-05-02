@@ -14,10 +14,14 @@ interface IndexPageProps {
     menus: any
 }
 
-export default function IndexPage({ menus, nodes, users }: IndexPageProps) {
+
+export default function IndexPage({ /*menus,*/ nodes, users }: IndexPageProps) {
+
+
   // @ts-ignore
     return (
-      <Layout title="Home" menus={menus}>
+      <Layout title="Home" /*menus={menus}*/>
+          res
           <div>
               <h1 className="mb-10 text-6xl font-black">Latest Articles.</h1>
               {nodes?.length ? (
@@ -50,7 +54,7 @@ export default function IndexPage({ menus, nodes, users }: IndexPageProps) {
 
 export async function getStaticProps(
     context
-): Promise<GetStaticPropsResult<IndexPageProps>> {
+): Promise<{ props: { nodes: any; menus: { main: []; footer: [] }; users: any } }> {
 
     const nodes = await drupal.getResourceCollectionFromContext<DrupalNode[]>(
         "node--article",
@@ -58,8 +62,8 @@ export async function getStaticProps(
         {
             params: {
                 "filter[status]": 1,
-                "fields[node--article]": "title,path,field_image,uid,created",
-                include: "field_image,uid",
+                "fields[node--article]": "title,path,field_image2,uid,created",
+                include: "field_image2,uid",
         sort: "-created",
       },
     }
@@ -67,7 +71,7 @@ export async function getStaticProps(
     const users = await drupal.getResourceCollection<DrupalUser[]>("user--user")
   return {
     props: {
-        menus: await getMenus(context),
+       // menus: await getMenus(context),
         nodes,
         users
     },

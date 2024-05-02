@@ -14,7 +14,6 @@ export async function getMenus(context?: GetStaticPropsContext): Promise<{
 
     const { tree: mainMenu } = await drupal.getMenu('main', options);
     const { tree: footerMenu } = await drupal.getMenu('footer', options);
-
     return {
         main: mainMenu,
         footer: footerMenu,
