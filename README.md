@@ -1,26 +1,70 @@
-# Events app using Drupal 10, Next JS, TailwindCss
+# Events Management Application
+This repository contains the configuration for an event management application utilizing **Drupal 10** as the backend and **Next.js** on the frontend, styled with **TailwindCSS**. It includes a Docker Compose setup for a complete local development environment.
 
-# Docker Compose configuration to run PHP 8.2 with Nginx, PHP-FPM, PostgreSQL 15 and varnish.
+## Architecture Overview
+The application is structured around several key services to ensure robust performance, easy scalability, and efficient search capabilities:
 
-Overview
-This Docker Compose configuration lets you run easily PHP 8.2 with Nginx, PHP-FPM, PostgreSQL 15 and varnsih. It exposes 4 services:
+## Services Included:
+- **Web:** Running on Nginx, optimized for Drupal 10.
+- **PHP:** PHP 8.2 with PHP-FPM, including common extensions and configured with xdebug.
+- **Database (db):** PostgreSQL 15, enhanced with UUID extension for better data management.
+- **Varnish:** Caching service to speed up content delivery.
+- **Redis:** In-memory data structure store, used as a database, cache, and message broker.
+- **Solr:** Powerful search platform for indexing and searching event content.
+## Code Quality Tools:
+- **PHPUnit:** For backend PHP unit testing to ensure code robustness and help maintain code health.
+- **SonarQube:** For continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities.
+- **ESLint:** For linting JavaScript code, including JSX used in Next.js, to enforce coding standards and catch syntax and logic errors before runtime.
+Additional Components to be Added:
+- **TailwindCSS:** For custom, utility-first styling. 
+- **ELK Stack:** For advanced logging, monitoring, and operational intelligence.
+More Solr Configurations: To enhance search capabilities across various event attributes. 
+## Prerequisites
+This project is designed to be cross-platform, working on Linux, Windows (Docker for Windows), and macOS (Docker for Mac). To get started, ensure you have the following installed:
 
-- web (Nginx)
-- php (PHP 8.2 with PHP-FPM)
-- db (PostgreSQL 15)
-- Varnish
-- Redis
-- Solr
-The PHP image comes with the most commonly used extensions and is configured with xdebug. 
-The UUID extension for PostgreSQL has been added. 
-Nginx default configuration is set up for Drupal 10.
+- **Docker CE:** For creating and managing containers.
+- **Docker Compose:** For defining and running multi-container Docker applications.
+- **Git:** Optional, for version control and collaboration.
+### Installation Guide
+1.  **Clone the repository** (if Git installed):
 
-# Install prerequisites
-For now the project has been tested on Linux only but should run fine on Docker for Windows and Docker for Mac.
+```
+git clone [repository-url]
+cd [repository-directory]
+```
+2.  **Start the Docker containers:**
+```
+docker-compose up -d --build
+```
+This command builds the necessary Docker images and starts the services defined in your docker-compose.yml file.
+3.  **Access the application:**
+- Frontend (Next.js) can be accessed at http://node.druxt-events.com. 
+- Backend (Drupal) can be accessed through the Nginx service at http://druxt-events.com.
+4. **Configure Drupal and Next.js:**
+Follow the setup instructions for each to configure the connection between backend and frontend components.
 
-You will need:
+## Testing and Code Quality Checks
+- **Running PHPUnit tests:**
+```
+docker-compose exec php phpunit
+```
+- **Analyzing code with SonarQube:**
 
-- Docker CE
-- Docker Compose
-- Git (optional)
+Make sure SonarQube is setup and running
+```
+docker-compose exec sonarqube sonar-scanner
+```
+Linting with ESLint:
+```
+docker-compose exec web eslint /path/to/your/javascript/files
+```
+
+### Contact Information
+If you have any questions, feedback, or would like to contribute to the project, please don't hesitate to reach out.
+
+### Contact me at:
+
+Email: tayahi.molka@gmail.com
+LinkedIn: https://www.linkedin.com/in/molka-tayahi-559b7a25/
+I am always open to discussing new ideas, improvements, or any sort of feedback that could enhance the project.
 
