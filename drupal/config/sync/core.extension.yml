@@ -16,6 +16,7 @@ module:
   cors_ui: 0
   datetime: 0
   dblog: 0
+  decoupled_preview: 0
   decoupled_router: 0
   dynamic_page_cache: 0
   editor: 0
@@ -28,6 +29,7 @@ module:
   image: 0
   jsonapi: 0
   jsonapi_extras: 0
+  jsonapi_resources: 0
   link: 0
   media: 0
   media_library: 0

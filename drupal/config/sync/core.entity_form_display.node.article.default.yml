@@ -6,10 +6,13 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_image2
     - field.field.node.article.field_tags
+    - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - image
     - media_library
     - path
     - text
@@ -48,6 +51,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_image2:
+    type: image_image
+    weight: 121
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags

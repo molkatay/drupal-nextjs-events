@@ -7,10 +7,13 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_image2
     - field.field.node.article.field_tags
     - node.type.article
   module:
     - comment
+    - image
+    - media
     - text
     - user
 _core:
@@ -37,13 +40,26 @@ content:
     weight: 110
     region: content
   field_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: above
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_image2:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 111
     region: content
   field_tags:
     type: entity_reference_label
