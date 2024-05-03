@@ -4,7 +4,7 @@ drupal_root=$(pwd)"/drupal"
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR)
 STAGED_FILES_STRING=$(echo "$STAGED_FILES" | tr '\n' ',' | sed 's/,$//')
 
-PHPUNIT_BIN="docker run --rm -v $drupal_root:/app -w /app my_drupal9_decoupled_php php -n -dxdebug.mode=coverage ./vendor/bin/phpunit"
+PHPUNIT_BIN="docker run --rm -v $drupal_root:/app -w /app druxt-events_php php -n -dxdebug.mode=coverage ./vendor/bin/phpunit"
 
 $PHPUNIT_BIN -c phpunit.xml --testsuite unit --coverage-clover drupal-coverage.xml --log-junit=build/phpunit.xml --bootstrap web/core/tests/bootstrap.php web
 # Check for PHPUNIT

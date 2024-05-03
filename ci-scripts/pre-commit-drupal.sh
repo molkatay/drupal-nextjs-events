@@ -4,10 +4,10 @@ STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR)
 
 drupal_root=$(pwd)"/drupal"
 
-PHPCS_BIN="docker run --rm -v $(pwd):/app -w /app wodby/drupal-php:8.1-dev-macos ./drupal/vendor/bin/phpcs"
-PHPCBF_BIN="docker run --rm -v $(pwd):/app -w /app wodby/drupal-php:8.1-dev-macos ./drupal/vendor/bin/phpcbf"
-PHPSTAN_BIN="docker run --rm -v $drupal_root:/app -w /app wodby/drupal-php:8.1-dev-macos ./vendor/bin/phpstan"
-PHPUNIT_BIN="docker run --rm -v $drupal_root:/app -w /app wodby/drupal-php:8.1-dev-macos ./vendor/bin/phpunit"
+PHPCS_BIN="docker run --rm -v $(pwd):/app -w /app druxt-events_php ./drupal/vendor/bin/phpcs"
+PHPCBF_BIN="docker run --rm -v $(pwd):/app -w /app druxt-events_php ./drupal/vendor/bin/phpcbf"
+PHPSTAN_BIN="docker run --rm -v $drupal_root:/app -w /app druxt-events_php ./vendor/bin/phpstan"
+PHPUNIT_BIN="docker run --rm -v $drupal_root:/app -w /app druxt-events_php ./vendor/bin/phpunit"
 # Check for PHPCS / PHPCBF
 if ! command -v $PHPCS_BIN &> /dev/null; then
     echo "[PRE-COMMIT] PHP CodeSniffer is not installed locally."

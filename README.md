@@ -16,9 +16,9 @@ The application is structured around several key services to ensure robust perfo
 - **SonarQube:** For continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities.
 - **ESLint:** For linting JavaScript code, including JSX used in Next.js, to enforce coding standards and catch syntax and logic errors before runtime.
 Additional Components to be Added:
-- **TailwindCSS:** For custom, utility-first styling. 
+- **TailwindCSS:** For custom, utility-first styling.
 - **ELK Stack:** For advanced logging, monitoring, and operational intelligence.
-More Solr Configurations: To enhance search capabilities across various event attributes. 
+More Solr Configurations: To enhance search capabilities across various event attributes.
 ## Prerequisites
 This project is designed to be cross-platform, working on Linux, Windows (Docker for Windows), and macOS (Docker for Mac). To get started, ensure you have the following installed:
 
@@ -38,7 +38,7 @@ docker-compose up -d --build
 ```
 This command builds the necessary Docker images and starts the services defined in your docker-compose.yml file.
 3.  **Access the application:**
-- Frontend (Next.js) can be accessed at http://node.druxt-events.com. 
+- Frontend (Next.js) can be accessed at http://node.druxt-events.com.
 - Backend (Drupal) can be accessed through the Nginx service at http://druxt-events.com.
 4. **Configure Drupal and Next.js:**
 Follow the setup instructions for each to configure the connection between backend and frontend components.
@@ -59,13 +59,29 @@ Linting with ESLint:
 docker-compose exec web eslint /path/to/your/javascript/files
 ```
 
+To use Code quality on pre commit you need to setting up Git Hooks
+### Setting Up Git Hooks
+
+1. **Install Pre-commit:**
+
+You can use tools like pre-commit. First, install it globally:
+```
+pip install pre-commit
+```
+2. ** Install Git Hook Scripts: **
+
+Run the following command to set up the hooks in your local repository:
+```
+pre-commit install
+```
+
+This will install the pre-commit hook into your `.git/hooks/pre-commit` directory. Now, each time you commit, the configured hooks will run and check for any issues.
 ### Contact Information
 If you have any questions, feedback, or would like to contribute to the project, please don't hesitate to reach out.
 
 ### Contact me at:
 
-- **Email:** tayahi.molka@gmail.com 
+- **Email:** tayahi.molka@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/molka-tayahi-559b7a25/
 
 I am always open to discussing new ideas, improvements, or any sort of feedback that could enhance the project.
-

@@ -14,11 +14,6 @@ repos:
         -   id: end-of-file-fixer
   - repo: local
     hooks:
-      - id: commit-message
-        name: Check commit message
-        entry: ci-scripts/commit-message.sh
-        language: script
-        stages: [prepare-commit-msg]
       - id: drupal-test
         name: Check for drupal
         entry: ci-scripts/pre-commit-drupal.sh
