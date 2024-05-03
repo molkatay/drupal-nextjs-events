@@ -4,13 +4,14 @@ import { DrupalNode } from "next-drupal"
 
 import { absoluteUrl, formatDate } from "lib/utils"
 
-interface NodeArticleTeaserProps {
+interface NodeEventTeaserProps {
   node: DrupalNode
 }
 
-export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
+export function NodeEventTeaser({ node, ...props }: NodeEventTeaserProps) {
   return (
     <article {...props}>
+        console.log(node);
       <Link href={node.path.alias} className="no-underline hover:text-blue-600">
         <h2 className="mb-4 text-4xl font-bold">{node.title}</h2>
       </Link>
@@ -29,7 +30,6 @@ export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
             src={absoluteUrl(node.field_image2.uri.url)}
             width={768}
             height={480}
-            alt={node.field_image2.resourceIdObjMeta.alt}
             alt={node.field_image2.resourceIdObjMeta.alt}
           />
         </figure>

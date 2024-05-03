@@ -64,7 +64,8 @@ If you have any questions, feedback, or would like to contribute to the project,
 
 ### Contact me at:
 
-Email: tayahi.molka@gmail.com
-LinkedIn: https://www.linkedin.com/in/molka-tayahi-559b7a25/
+- **Email:** tayahi.molka@gmail.com 
+- **LinkedIn:** https://www.linkedin.com/in/molka-tayahi-559b7a25/
+
 I am always open to discussing new ideas, improvements, or any sort of feedback that could enhance the project.
 
