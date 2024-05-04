@@ -33,7 +33,7 @@ export function Layout({ title, children, menus }):LayoutProps {
 
                         </div>
                         <span
-                            className="text-lg font-semibold">Acquia CMS</span>
+                            className="text-lg font-semibold">Druxt Events</span>
                     </Link>
                     {menus?.main && <MenuMain menu={menus.main}/>}
                 </div>
