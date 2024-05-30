@@ -4,8 +4,8 @@ STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR)
 
 drupal_root=$(pwd)"/drupal"
 
-PHPCS_BIN="docker run --rm -v $(pwd):/app -w /app druxt-events_php ./phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml"
-PHPCBF_BIN="docker run --rm -v $(pwd):/app -w /app druxt-events_php ./phpcbf --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml "
+PHPCS_BIN="docker run --rm -v $(pwd):/app -w /app druxt-events_php phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml"
+PHPCBF_BIN="docker run --rm -v $(pwd):/app -w /app druxt-events_php phpcbf --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml"
 PHPSTAN_BIN="docker run --rm -v $drupal_root:/app -w /app druxt-events_php ./vendor/bin/phpstan"
 PHPUNIT_BIN="docker run --rm -v $drupal_root:/app -w /app druxt-events_php ./vendor/bin/phpunit"
 # Check for PHPCS / PHPCBF
