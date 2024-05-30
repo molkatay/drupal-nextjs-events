@@ -14,15 +14,14 @@ RUN apt-get update && \
         libssl-dev \
         libxml2-dev \
         libreadline-dev \
+        git \
         unzip \
         supervisor
 
 #####################################
 # PHP Extensions
 #####################################
-# Install the PHP shared memory driver
-RUN pecl install APCu && \
-    docker-php-ext-enable apcu
+
 
 # Install the PHP bcmath extension
 RUN docker-php-ext-install bcmath
@@ -39,9 +38,6 @@ RUN docker-php-ext-install gd
 # Install the PHP intl extention
 RUN docker-php-ext-install intl
 
-# Install the PHP mysqli extention
-RUN docker-php-ext-install mysqli && \
-    docker-php-ext-enable mysqli
 
 # Install the PHP opcache extention
 RUN docker-php-ext-install opcache
@@ -68,3 +64,23 @@ RUN pecl install redis && \
 #####################################
 RUN curl -s http://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+# Allow the necessary Composer plugin
+RUN composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+
+# Install coder
+RUN mkdir -p /root/.composer && composer global require drupal/coder
+RUN composer global show -P
+
+# Add Composer's global bin directory to the PATH
+ENV PATH="/root/.composer/vendor/bin:${PATH}"
+RUN export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+# Copy php.ini configuration
+COPY conf/php/php.ini /usr/local/etc/php/conf.d/php.ini
+
+# Copy xdebug configuration
+COPY conf/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
