@@ -71,12 +71,15 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # Allow the necessary Composer plugin
 RUN composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
 
-# Install coder
-RUN mkdir -p /root/.composer && composer global require drupal/coder
-RUN composer global show -P
+# Install coder and PHP_CodeSniffer
+RUN mkdir -p /root/.composer && composer global require drupal/coder && composer global require squizlabs/php_codesniffer
+
+# Install PHPCBF
+RUN composer global require squizlabs/php_codesniffer
 
 # Add Composer's global bin directory to the PATH
 ENV PATH="/root/.composer/vendor/bin:${PATH}"
+
 RUN export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 # Copy php.ini configuration

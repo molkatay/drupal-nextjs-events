@@ -12,14 +12,14 @@ repos:
         -   id: check-symlinks
         -   id: trailing-whitespace
         -   id: end-of-file-fixer
-  # - repo: local
-#    hooks:
-#      - id: drupal-test
-#        name: Check for drupal
-#        entry: ci-scripts/pre-commit-drupal.sh
-#        language: script
-#        pass_filenames: false
-#        always_run: true
+  -   repo: local
+      hooks:
+      - id: drupal-test
+        name: Check for drupal
+        entry: ci-scripts/pre-commit-drupal.sh
+        language: script
+        pass_filenames: false
+        always_run: true
 #      - id: sonar-scanner
 #        name: Sonar check
 #        entry: ci-scripts/sonar-scanner.sh
