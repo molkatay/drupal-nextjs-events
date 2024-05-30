@@ -8,6 +8,9 @@ export const drupal = new DrupalClient(
           clientId: process.env.DRUPAL_CLIENT_ID,
           clientSecret: process.env.DRUPAL_CLIENT_SECRET,
       },
+      headers: {
+          "Content-Type": "application/json",
+      },
   }
-)
 
+)

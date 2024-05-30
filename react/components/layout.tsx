@@ -1,10 +1,11 @@
-import Link from "next/link"
-
-import { PreviewAlert } from "components/preview-alert"
-import { MenuMain } from 'components/menu--main';
-import { MenuFooter } from 'components/menu--footer';
+import {PreviewAlert} from "components/preview-alert"
 import {DrupalMenuLinkContent} from "next-drupal";
+import React from "react";
+
 import Head from "next/head";
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
+
 export interface LayoutProps {
     title?: string;
     children?: React.ReactNode;
@@ -12,39 +13,27 @@ export interface LayoutProps {
         main: DrupalMenuLinkContent[];
         footer: DrupalMenuLinkContent[];
     };
+    siteInfos: {
+        name: string;
+        slogan: string;
+        logo: string;
+        favicon: string;
+    };
 }
-export function Layout({ title, children, menus }):LayoutProps {
-  // @ts-ignore
-    return (
-    <>
-        <Head>
-            <title>{`${title}`}</title>
-        </Head>
-      <PreviewAlert />
-        <div className="max-w-screen-md px-6 mx-auto">
-            <header className="border-b">
-                <div
-                    className="container flex flex-col items-center justify-between px-6 py-4 mx-auto md:flex-row">
-                    <Link
-                        href="/"
-                        className="flex items-center mb-4 space-x-2 no-underline md:mb-0"
-                    >
-                        <div className="w-8 h-10">
 
-                        </div>
-                        <span
-                            className="text-lg font-semibold">Druxt Events</span>
-                    </Link>
-                    {menus?.main && <MenuMain menu={menus.main}/>}
-                </div>
-            </header>
-            <main className="container py-10 mx-auto">{children}</main>
-            <footer className="container px-6 mx-auto">
-                <div className="pt-8 pb-12 border-t md:pt-12">
-                    {menus?.footer && <MenuFooter menu={menus.footer}/>}
-                </div>
-            </footer>
-        </div>
-    </>
-  )
+export function Layout({title, children, menus, siteInfos}): LayoutProps {
+    return (
+        <>
+            <Head>
+                <title>{`${title}`}</title>
+            </Head>
+            <PreviewAlert/>
+            <Navbar menus={menus} siteInfos={siteInfos}/>
+
+            <main className="relative overflow-hidden">{children}</main>
+
+            <Footer menus={menus.footer} siteInfos={siteInfos}/>
+
+        </>
+    )
 }

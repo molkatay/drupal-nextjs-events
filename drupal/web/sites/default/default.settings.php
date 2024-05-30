@@ -181,8 +181,8 @@ $databases = [];
  *
  * WARNING: The above defaults are designed for database portability. Changing
  * them may cause unexpected behavior, including potential data loss. See
- * https://www.drupal.org/developing/api/database/configuration for more
- * information on these defaults and the potential issues.
+ * https://www.drupal.org/docs/8/api/database-api/database-configuration for
+ * more information on these defaults and the potential issues.
  *
  * More details can be found in the constructor methods for each driver:
  * - \Drupal\mysql\Driver\Database\mysql\Connection::__construct()
@@ -714,8 +714,9 @@ $settings['update_free_access'] = FALSE;
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-
+if (isset($app_root) && (isset($site_path))) {
+  $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+}
 /**
  * Override the default service container class.
  *

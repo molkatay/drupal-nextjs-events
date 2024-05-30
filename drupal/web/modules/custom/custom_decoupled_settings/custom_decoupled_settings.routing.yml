@@ -1,0 +1,8 @@
+custom_decoupled_settings.system_site_config:
+  path: '/jsonapi/site/site'
+  defaults:
+    _controller: '\Drupal\custom_decoupled_settings\Controller\SystemSiteConfigController::getConfig'
+    _title: 'System Site Config'
+  requirements:
+    _permission: 'access content'
+    _format: 'json'

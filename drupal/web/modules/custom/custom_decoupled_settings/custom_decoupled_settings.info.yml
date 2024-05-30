@@ -1,0 +1,5 @@
+name: 'Custom decoupled Settings'
+type: module
+description: 'Custom decoupled settings'
+package: Custom
+core_version_requirement: ^10 || ^11

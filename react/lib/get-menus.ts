@@ -1,13 +1,12 @@
 import { DrupalMenuLinkContent } from 'next-drupal';
 import { drupal } from '../lib/drupal';
-import { JsonApiWithLocaleOptions } from 'next-drupal/dist/types';
 import { GetStaticPropsContext } from 'next';
 
 export async function getMenus(context?: GetStaticPropsContext): Promise<{
     main: DrupalMenuLinkContent[];
     footer: DrupalMenuLinkContent[];
 }> {
-    let options: JsonApiWithLocaleOptions = {};
+    let options: { defaultLocale: any; locale: any } = {};
     if (context) {
         options = { defaultLocale: context.defaultLocale, locale: context.locale };
     }

@@ -4,32 +4,36 @@ import { DrupalNode } from "next-drupal"
 
 import { drupal } from "lib/drupal"
 import { NodeArticle } from "components/node--article"
+import { NodeEvent } from "components/node--event"
 import { NodeBasicPage } from "components/node--basic-page"
 import { Layout } from "components/layout"
+import {getMenus} from "../lib/get-menus";
 
-const RESOURCE_TYPES = ["node--page", "node--article"]
+const RESOURCE_TYPES = ["node--page", "node--article", "node--event"]
 
 interface NodePageProps {
   resource: DrupalNode
 }
 
-export default function NodePage({ resource }: NodePageProps) {
+export default function NodePage({ menus, resource }: NodePageProps) {
   if (!resource) return null
 
   return (
-    <Layout>
-      <Head>
+      <Layout menus={menus}>
 
+      <Head>
         <title>{resource.title}</title>
         <meta name="description" content="A Next.js site powered by Drupal." />
       </Head>
+
       {resource.type === "node--page" && <NodeBasicPage node={resource} />}
       {resource.type === "node--article" && <NodeArticle node={resource} />}
+      {resource.type === "node--event" && <NodeEvent node={resource} />}
     </Layout>
   )
 }
 
-export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
+export async function getStaticPaths(context): Promise<{ paths: any; fallback: string }> {
 
   return {
     paths: await drupal.getStaticPathsFromContext(RESOURCE_TYPES, context),
@@ -37,9 +41,10 @@ export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   }
 }
 
+
 export async function getStaticProps(
   context
-): Promise<GetStaticPropsResult<NodePageProps>> {
+): Promise<{ notFound: boolean }> {
   const path = await drupal.translatePathFromContext(context)
 
   if (!path) {
@@ -53,7 +58,7 @@ export async function getStaticProps(
   let params = {}
   if (type === "node--article") {
     params = {
-      include: "field_image,uid,field_tags",
+      include: "field_image,uid,field_tags,menu_link",
     }
   }
 
@@ -83,6 +88,7 @@ export async function getStaticProps(
 
   return {
     props: {
+      menus: await getMenus(context),
       resource,
     },
   }

@@ -1,60 +1,50 @@
-import { GetStaticPropsResult } from "next"
-import {DrupalNode, DrupalUser} from "next-drupal"
+import {DrupalNode} from "next-drupal"
 import { getMenus } from 'lib/get-menus';
 
 import { drupal } from "lib/drupal"
 import { Layout } from "components/layout"
-import { NodeArticleTeaser } from "components/node--article--teaser"
-import { NodeEventTeaser } from "components/node--event--teaser"
-import { User } from "components/user"
 import React from "react";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import GetApp from "../components/GetApp";
+import Camp from "../components/Camp";
+import Guide from "../components/Guide";
+import Articles from "../components/Articles";
+import Events from "../components/Events";
+import {getSiteInfos} from "../lib/get-site-infos";
 
 interface IndexPageProps {
   nodes: DrupalNode[],
-    events: DrupalNode[],
-    menus: any
+events: DrupalNode[],
+    siteInfos:any[]
+menus: any,
 }
 
 
-export default function IndexPage({ menus, nodes, users, events }: IndexPageProps) {
-
+export default function IndexPage({ menus, nodes, events, siteInfos }: IndexPageProps) {
 
   // @ts-ignore
     return (
-        <Layout title="Home" menus={menus}>
-            <div>
-                <h1 className="mb-10 text-6xl font-black">Latest Articles.</h1>
-                {nodes?.length ? (
-                    nodes.map((node) => (
-                        <div key={node.id}>
-                            <NodeArticleTeaser node={node}/>
-                            <hr className="my-20"/>
-                        </div>
-                    ))
-                ) : (
-                    <p className="py-4">No nodes found</p>
-                )}
-            </div>
-            <div>
-                <h1 className="mb-10 text-6xl font-black">Latest events.</h1>
-                {events?.length ? (
-                    events.map((node) => (
-                        <div key={node.id}>
-                            <NodeEventTeaser node={node}/>
-                            <hr className="my-20"/>
-                        </div>
-                    ))
-                ) : (
-                    <p className="py-4">No events found</p>
-                )}
-            </div>
+        <Layout title="Home" menus={menus} siteInfos={siteInfos}>
+
+            <Hero/>
+            <Camp/>
+            <Guide/>
+            <Features/>
+            <GetApp/>
+
+            <Articles nodes={nodes}/>
+            <Events events={events}/>
+
         </Layout>
     )
 }
 
 export async function getStaticProps(
     context
-): Promise<{ props: { nodes: any; menus: { main: []; footer: [] }; users: any } }> {
+): Promise<{
+    props: { nodes: any; menus: { main: []; footer: [] }; events: any; siteInfos:[]; }
+}> {
 
     const nodes = await drupal.getResourceCollectionFromContext<DrupalNode[]>(
         "node--article",
@@ -62,29 +52,36 @@ export async function getStaticProps(
         {
             params: {
                 "filter[status]": 1,
-                "fields[node--article]": "title,path,field_image2,uid,created",
-                include: "field_image2,uid",
+                "fields[node--article]": "title,path,field_image,uid,created,body",
+                "fields[taxonomy_term--tags]": "id,name",
+                include: "field_tags,field_image.field_media_image,uid",
                 sort: "-created",
-      },
-    }
-  )
+                "page[limit]": 3
+            },
+        }
+    )
     const events = await drupal.getResourceCollectionFromContext<DrupalNode[]>(
         "node--event",
         context,
         {
             params: {
                 "filter[status]": 1,
-                "fields[node--event]": "title,path,uid,created",
-                include: "uid",
-                sort: "-created",
+                "fields[node--event]": "title,path,uid,field_event_date,body",
+                include: "field_image.field_media_image,uid",
+                sort: "-field_event_date",
+                "page[limit]": 3
             },
         }
     )
+
+
     return {
-    props: {
-       menus: await getMenus(context),
-        nodes,
-        events
+        props: {
+            menus: await getMenus(context),
+            siteInfos: await getSiteInfos(context),
+            nodes,
+            events,
+
     },
   }
 }
