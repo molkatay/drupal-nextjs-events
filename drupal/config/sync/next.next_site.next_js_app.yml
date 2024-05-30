@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: next_js_app
 label: 'Next JS App'
-base_url: 'http://node.druxt-events.com:8000/'
-preview_url: 'http://node.druxt-events.com:8000/api/preview'
+base_url: 'http://node.druxt-events.com'
+preview_url: 'http://node.druxt-events.com/api/preview'
 preview_secret: secret
-revalidate_url: ''
-revalidate_secret: ''
+revalidate_url: 'http://node.druxt-events.com/api/revalidate'
+revalidate_secret: secret

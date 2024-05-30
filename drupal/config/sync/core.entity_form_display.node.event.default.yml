@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_category
     - field.field.node.event.field_event_date
     - field.field.node.event.field_image
     - field.field.node.event.field_registration
@@ -34,6 +35,16 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_category:
+    type: entity_reference_autocomplete
+    weight: 125
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_event_date:
     type: datetime_default

@@ -1,0 +1,26 @@
+<?php
+  /**
+  * Implements hook_form_alter().
+  */
+  function MODULE_NAME_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'commerce_product_attribute_edit_form') {
+  $attribute = $form_state->getFormObject()->getEntity();
+  $form['attribute_required'] = [
+  '#type' => 'checkbox',
+  '#title' => 'Attribute Required',
+  '#default_value' => $attribute->getThirdPartySetting('MODULE_NAME', 'attribute_required'),
+  ];
+  $form['#entity_builders'][] = 'MODULE_NAME_product_attribute_edit_form_builder';
+  }
+}
+
+  /**
+  * Entity builder for the commerce_product_attribute config entity.
+  */
+  function MODULE_NAME_product_attribute_edit_form_builder($entity_type, ProductAttribute $attribute, &$form, FormStateInterface $form_state) {
+  if ($form_state->getValue('attribute_required')) {
+  $attribute->setThirdPartySetting('MODULE_NAME', 'attribute_required', $form_state->getValue('attribute_required'));
+  return;
+  }
+  $attribute->unsetThirdPartySetting('MODULE_NAME', 'attribute_required');
+}
