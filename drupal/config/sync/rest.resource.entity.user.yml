@@ -1,0 +1,20 @@
+uuid: a51255cb-af8d-4725-9434-a1f5602e8bc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - key_auth
+    - serialization
+    - simple_oauth
+    - user
+id: entity.user
+plugin_id: 'entity:user'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - key_auth
+    - oauth2

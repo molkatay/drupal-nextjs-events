@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - rest.resource.webform_rest_submit
   module:
     - comment
     - contact
     - filter
+    - key_auth
     - media
+    - rest
     - search
     - system
 _core:
@@ -21,6 +24,8 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'restful post webform_rest_submit'
   - 'search content'
+  - 'use key authentication'
   - 'use text format restricted_html'
   - 'view media'

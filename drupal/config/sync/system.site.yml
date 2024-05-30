@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 57d2427d-7a45-43a6-875f-1a0797bc4e70
-name: 'Drupal events Backoffice'
+name: 'Drupal events'
 mail: tayahi.molka@gmail.com
-slogan: ''
+slogan: 'Drupal events Slogan'
 page:
   403: ''
   404: ''

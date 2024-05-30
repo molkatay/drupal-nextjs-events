@@ -7,12 +7,10 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
-    - field.field.node.article.field_image2
     - field.field.node.article.field_tags
     - node.type.article
   module:
     - comment
-    - image
     - media
     - text
     - user
@@ -50,22 +48,11 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
-  field_image2:
-    type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 111
-    region: content
   field_tags:
     type: entity_reference_label
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 10
     region: content
