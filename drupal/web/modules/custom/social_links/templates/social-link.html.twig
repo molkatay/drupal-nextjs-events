@@ -1,0 +1,7 @@
+{# templates/social-link.html.twig #}
+<div class="social-link">
+  {% if icon_url %}
+    <img src="{{ icon_url }}" alt="{{ network }} icon" />
+  {% endif %}
+  <a href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ network }}</a>
+</div>

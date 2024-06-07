@@ -1,0 +1,33 @@
+# modules/custom/social_links/config/schema/social_links.schema.yml
+social_links.field.schema.social_link:
+  type: mapping
+  label: 'Social Link'
+  mapping:
+    value:
+      type: mapping
+      label: 'Social Link Value'
+      mapping:
+        network:
+          type: string
+          label: 'Network'
+        url:
+          type: uri
+          label: 'URL'
+        icon:
+          type: integer
+          label: 'Icon'
+        default_value:
+          type: sequence
+          label: 'Default value'
+          sequence:
+            - type: mapping
+              mapping:
+                network:
+                  type: string
+                  label: 'Network'
+                url:
+                  type: uri
+                  label: 'URL'
+                icon:
+                  type: integer
+                  label: 'Icon'
