@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\block\Entity\Block;
+
+function social_links_theme()
+{
+    return [
+    'social_link' => [
+      'variables' => [
+        'network' => null,
+        'url' => null,
+        'icon_url' => null,
+      ],
+    ],
+    ];
+}

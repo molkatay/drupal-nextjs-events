@@ -16,7 +16,8 @@
  *
  * @see https://wiki.php.net/rfc/expectations
  */
-assert_options(ASSERT_ACTIVE, TRUE);
+
+assert_options(ASSERT_ACTIVE, true);
 \Drupal\Component\Assertion\Handle::register();
 
 # ================================================================
@@ -68,17 +69,17 @@ foreach ($cache_bins as $bin) {
 # Performance settings
 # ================================================================
 $config['system.logging']['error_level'] = 'verbose';
-$config['system.performance']['cache']['page']['use_internal'] = FALSE;
-$config['system.performance']['css']['preprocess'] = FALSE;
-$config['system.performance']['css']['gzip'] = FALSE;
-$config['system.performance']['js']['preprocess'] = FALSE;
-$config['system.performance']['js']['gzip'] = FALSE;
+$config['system.performance']['cache']['page']['use_internal'] = false;
+$config['system.performance']['css']['preprocess'] = false;
+$config['system.performance']['css']['gzip'] = false;
+$config['system.performance']['js']['preprocess'] = false;
+$config['system.performance']['js']['gzip'] = false;
 
 # ================================================================
 # Debug views settings
 # ================================================================
-$config['views.settings']['ui']['show']['sql_query']['enabled'] = TRUE;
-$config['views.settings']['ui']['show']['performance_statistics'] = TRUE;
+$config['views.settings']['ui']['show']['sql_query']['enabled'] = true;
+$config['views.settings']['ui']['show']['performance_statistics'] = true;
 
 # ================================================================
 # Expiration of temporary upload files
@@ -88,5 +89,6 @@ $config['system.file']['temporary_maximum_age'] = 604800;
 // Change kint max_depth setting.
 if (class_exists('Kint')) {
   // Set the max_depth to prevent out-of-memory.
-  \Kint::$max_depth = 4;
+    \Kint::$max_depth = 4;
 }
+$config['system.logging']['error_level'] = 'verbose';

@@ -1,0 +1,27 @@
+uuid: 3c50aff9-0a3c-45c9-ac59-94a4ba55df32
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.svg.field_media_svg
+    - media.type.svg
+id: media.svg.media_library
+targetEntityType: media
+bundle: svg
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_svg: true
+  path: true
+  status: true
+  uid: true

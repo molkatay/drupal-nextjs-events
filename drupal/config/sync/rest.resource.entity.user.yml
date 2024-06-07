@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - key_auth
+    - schemata_json_schema
     - serialization
     - simple_oauth
     - user
@@ -13,8 +13,11 @@ granularity: resource
 configuration:
   methods:
     - GET
+    - POST
   formats:
+    - 'schema_json:json'
     - json
+    - schema_json
   authentication:
-    - key_auth
-    - oauth2
+    1: oauth2
+    2: cookie

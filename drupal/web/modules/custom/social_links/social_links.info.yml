@@ -1,0 +1,8 @@
+name: 'social_links'
+type: module
+description: 'A custom module to add social links with, network, URL and icon.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:media
+  - svg_image_field
