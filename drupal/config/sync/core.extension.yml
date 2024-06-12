@@ -20,6 +20,7 @@ module:
   contextual: 0
   core_event_dispatcher: 0
   custom_decoupled_settings: 0
+  custom_oauth: 0
   datetime: 0
   dblog: 0
   decoupled_preview: 0
@@ -43,6 +44,7 @@ module:
   jsonapi_menu_items: 0
   jsonapi_pathauto_breadcrumbs: 0
   jsonapi_resources: 0
+  jsonapi_views: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -85,8 +87,9 @@ module:
   simple_oauth: 0
   simplify: 0
   social_links: 0
+  social_media_links: 0
+  social_media_links_field: 0
   subrequests: 0
-  svg_image: 0
   svg_image_field: 0
   system: 0
   taxonomy: 0

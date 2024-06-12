@@ -1,0 +1,38 @@
+uuid: 95ccef31-4e56-4fdb-b9bc-66f677f2619d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.event.body
+    - field.field.node.event.field_category
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_media_image
+    - field.field.node.event.field_registration
+    - field.field.node.event.field_summary
+    - field.field.node.event.field_tags
+    - node.type.event
+  module:
+    - user
+id: node.event.card
+targetEntityType: node
+bundle: event
+mode: card
+content:
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_category: true
+  field_event_date: true
+  field_registration: true
+  field_summary: true
+  field_tags: true
+  links: true

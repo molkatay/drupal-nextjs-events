@@ -1,0 +1,7 @@
+name: 'Custom oauth'
+type: module
+description: 'Add content to Oauth tokens'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - simple_oauth:simple_oauth

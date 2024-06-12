@@ -1,0 +1,25 @@
+uuid: d79c784b-c28e-4a23-bf8b-2f0566de3294
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - schemata_json_schema
+    - serialization
+    - simple_oauth
+    - user
+id: entity.media
+plugin_id: 'entity:media'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - 'schema_json:json'
+    - json
+  authentication:
+    - oauth2
+    - cookie

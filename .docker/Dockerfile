@@ -9,6 +9,7 @@ RUN apt-get update && \
         libz-dev \
         libzip-dev \
         libjpeg-dev \
+    libwebp-dev \
         libpng-dev \
         libfreetype6-dev \
         libssl-dev \
@@ -32,7 +33,8 @@ RUN docker-php-ext-install exif
 # Install the PHP graphics library
 RUN docker-php-ext-configure gd \
     --with-freetype \
-    --with-jpeg
+    --with-jpeg \
+     --with-webp
 RUN docker-php-ext-install gd
 
 # Install the PHP intl extention
@@ -41,6 +43,10 @@ RUN docker-php-ext-install intl
 
 # Install the PHP opcache extention
 RUN docker-php-ext-install opcache
+
+# Install APCu extension
+RUN pecl install apcu \
+    && docker-php-ext-enable apcu
 
 # Install the PHP pcntl extention
 RUN docker-php-ext-install pcntl

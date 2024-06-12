@@ -6,12 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_image
+    - field.field.node.article.field_media_image
     - field.field.node.article.field_tags
-    - image.style.medium
     - node.type.article
   module:
-    - media
     - text
     - user
 _core:
@@ -29,17 +27,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_image:
-    type: media_thumbnail
-    label: above
-    settings:
-      image_link: ''
-      image_style: medium
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_tags:
     type: entity_reference_label
     label: above
@@ -55,3 +42,5 @@ content:
     region: content
 hidden:
   comment: true
+  field_media_image: true
+  langcode: true

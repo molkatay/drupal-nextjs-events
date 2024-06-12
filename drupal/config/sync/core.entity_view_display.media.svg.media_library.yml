@@ -8,7 +8,7 @@ dependencies:
     - image.style.medium
     - media.type.svg
   module:
-    - svg_image
+    - image
 id: media.svg.media_library
 targetEntityType: media
 bundle: svg
@@ -32,5 +32,6 @@ content:
 hidden:
   created: true
   field_media_svg: true
+  langcode: true
   name: true
   uid: true
