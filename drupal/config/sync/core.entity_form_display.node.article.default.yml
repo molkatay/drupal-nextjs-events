@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_image
+    - field.field.node.article.field_media_image
     - field.field.node.article.field_tags
     - node.type.article
   module:
@@ -42,9 +42,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
+  field_media_image:
     type: media_library_widget
-    weight: 122
+    weight: 121
     region: content
     settings:
       media_types: {  }
@@ -58,6 +58,13 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path

@@ -3,9 +3,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - basic_auth
     - node
     - serialization
+    - simple_oauth
+    - user
 _core:
   default_config_hash: 6ONvVCbif1qZnRfa8XmPzMwNKLDhF6K7eTrTgIVtP5E
 id: entity.node
@@ -15,9 +16,11 @@ configuration:
   methods:
     - GET
     - POST
-    - PATCH
     - DELETE
+    - PATCH
   formats:
     - json
+    - schema_json
   authentication:
-    - basic_auth
+    - oauth2
+    - cookie

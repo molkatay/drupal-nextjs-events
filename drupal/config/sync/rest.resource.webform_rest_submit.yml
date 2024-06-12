@@ -15,6 +15,7 @@ configuration:
     - POST
   formats:
     - json
+    - schema_json
   authentication:
     - oauth2
     - cookie

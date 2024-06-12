@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Custom oauth module.
+ */
+
+/**
+ * Implements hook_simple_oauth_oidc_claims_alter().
+ */
+use Drupal\simple_oauth\Entities\AccessTokenEntity;
+use Drupal\user\Entity\User;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_simple_oauth_private_claims_alter().
+ *
+ * Alters the private claims in the access token.
+ *
+ * @param array $private_claims
+ *   The private claims in the access token.
+ * @param \Drupal\simple_oauth\Entities\AccessTokenEntity $access_token_entity
+ *   The access token entity.
+ */
+function custom_oauth_simple_oauth_private_claims_alter(array &$private_claims, AccessTokenEntity $access_token_entity)
+{
+  // Load the user based on the user identifier from the access token entity.
+    $user_id = $access_token_entity->getUserIdentifier();
+    $user = User::load($user_id);
+
+  // Initialize the image URL as an empty string.
+    $image = '';
+
+  // If the user has a user picture, get the file ID and generate the file URL.
+    if ($user->get('user_picture')->isEmpty() === false) {
+        $fid = $user->get('user_picture')->first()->getValue()['target_id'];
+        $file = File::load($fid);
+        if ($file) {
+            $image = \Drupal::service('file_url_generator')->generateString($file->getFileUri());
+        }
+    }
+
+  // Set the private claims.
+    $private_claims = [
+    'email' => $user->getEmail(),
+    'name' => $user->getAccountName(),
+    'id' => $user->id(),
+    'image' => $image,
+    ];
+}
