@@ -228,15 +228,3 @@ parameters:
     # This is not applicable when a queue is suspended but does not specify
     # how long to wait before attempting to resume.
     suspendMaximumWait: 30
-  simple_oauth.openid.claims:
-    - sub
-    - name
-    - preferred_username
-    - email
-    - email_verified
-    - locale
-    - profile
-    - updated_at
-    - zoneinfo
-    - phone_number
-    - image
