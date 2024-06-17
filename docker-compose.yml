@@ -18,6 +18,8 @@ services:
       - ./.docker/conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./.docker/conf/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
       - ./drupal:/var/www/html
+    environment:
+      PHP_IDE_CONFIG: "serverName=Xdebug_server"
   db:
     image: postgres:15
     restart: always

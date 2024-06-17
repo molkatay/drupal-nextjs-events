@@ -56,8 +56,9 @@ RUN apt-get install -y libpq-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# install XDebug but without enabling
+# install  and enable XDebug
 RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
 
 # Install the PHP zip extention
 RUN docker-php-ext-install zip
