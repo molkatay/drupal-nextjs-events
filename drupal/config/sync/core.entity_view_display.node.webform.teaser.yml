@@ -31,5 +31,4 @@ content:
     weight: 100
     region: content
 hidden:
-  langcode: true
   webform: true

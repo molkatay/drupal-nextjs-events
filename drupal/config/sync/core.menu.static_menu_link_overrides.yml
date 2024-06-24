@@ -2,14 +2,14 @@ _core:
   default_config_hash: CXhei_vpaZk-3f_Mj2cH0YmpK-ZpKHoSzVA3yZrDq0g
 definitions:
   contact__site_page:
-    enabled: true
     menu_name: footer
     parent: ''
-    expanded: false
     weight: 0
-  standard__front_page:
+    expanded: false
     enabled: true
+  standard__front_page:
     menu_name: main
     parent: ''
-    expanded: false
     weight: -50
+    expanded: false
+    enabled: true

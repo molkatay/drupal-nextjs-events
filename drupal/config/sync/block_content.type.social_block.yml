@@ -1,8 +1,0 @@
-uuid: 458fd0a6-e2ce-4dfe-aeec-91d71a78927b
-langcode: en
-status: true
-dependencies: {  }
-id: social_block
-label: 'Social Block'
-revision: 0
-description: ''

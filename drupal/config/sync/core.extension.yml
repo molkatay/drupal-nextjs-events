@@ -45,6 +45,7 @@ module:
   jsonapi_pathauto_breadcrumbs: 0
   jsonapi_resources: 0
   jsonapi_views: 0
+  layout_builder: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -52,6 +53,8 @@ module:
   media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
+  navigation: 0
+  navigation_top_bar: 0
   next: 0
   next_jsonapi: 0
   node: 0
@@ -108,6 +111,7 @@ module:
   webform_scheduled_email: 0
   webform_share: 0
   webform_ui: 0
+  workspaces: 0
   menu_admin_per_menu: 1
   pathauto: 1
   views: 10
