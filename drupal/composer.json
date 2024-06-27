@@ -64,6 +64,7 @@
         "drupal/openapi_ui": "^1.0@RC",
         "drupal/openapi_ui_redoc": "^1.0",
         "drupal/openapi_ui_swagger": "^1.0",
+        "drupal/openid_connect": "^1.4",
         "drupal/paragraphs": "^1.16",
         "drupal/pathauto": "^1.11",
         "drupal/perimeter": "^3.0",
@@ -91,6 +92,7 @@
         "drupal/taxonomy_access_fix": "^4.0",
         "drupal/tmgmt": "^1.15",
         "drupal/token": "^1.13",
+        "drupal/typed_entity": "^4.0",
         "drupal/varnish_purge": "^2.2",
         "drupal/view_unpublished": "^1.2",
         "drupal/views_bulk_operations": "^4.2",
@@ -117,7 +119,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
             "cweagans/composer-patches": true,
-            "mnsami/composer-custom-directory-installer": true
+            "mnsami/composer-custom-directory-installer": true,
+            "simplesamlphp/composer-module-installer": true
         },
         "sort-packages": true
     },

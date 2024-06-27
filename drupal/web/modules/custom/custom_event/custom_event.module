@@ -1,0 +1,19 @@
+<?php
+
+
+/**
+ * Implements hook_entity_bundle_info_alter().
+ */
+function custom_event_entity_bundle_info_alter(array &$bundles): void {
+  if (isset($bundles['node']['event'])) {
+    // phpcs:ignore Drupal.Classes.FullyQualifiedNamespace.UseStatementMissing
+    $bundles['node']['event']['class'] = \Drupal\custom_event\Entity\Node\Event::class;
+  }
+}
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function hook_entity_type_build(&$entity_types) {
+  $entity_types[Node::ENTITY_TYPE]->setClass(Node::class);
+}

@@ -1,0 +1,11 @@
+uuid: a7573b18-ab63-463f-9aa1-538cae594adc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-hvflIKEeOFozhnVu6Cl2f2-yHHsFgCFKt6bg__TkNQ'
+id: json_api_user
+label: 'JSON:API User'
+weight: 4
+is_admin: null
+permissions: {  }
