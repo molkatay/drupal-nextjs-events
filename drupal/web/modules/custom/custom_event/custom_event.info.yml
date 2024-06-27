@@ -1,0 +1,5 @@
+name: 'custom_event'
+type: module
+description: 'Implement event module'
+package: Custom
+core_version_requirement: ^10 || ^11
