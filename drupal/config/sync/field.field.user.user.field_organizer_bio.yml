@@ -1,0 +1,22 @@
+uuid: 7d97da8c-2ac2-4b19-aa77-0663bd9b862c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_organizer_bio
+  module:
+    - text
+    - user
+id: user.user.field_organizer_bio
+field_name: field_organizer_bio
+entity_type: user
+bundle: user
+label: 'Organizer Bio'
+description: 'A brief biography or description of the organizer.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -5,20 +5,35 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - field.field.node.event.body
-    - field.field.node.event.field_category
+    - field.field.node.event.field_capacity
+    - field.field.node.event.field_difficulty_level
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_location
     - field.field.node.event.field_media_image
+    - field.field.node.event.field_organizer
     - field.field.node.event.field_registration
+    - field.field.node.event.field_season
     - field.field.node.event.field_summary
     - field.field.node.event.field_tags
     - node.type.event
   module:
+    - datetime
     - user
 id: node.event.card
 targetEntityType: node
 bundle: event
 mode: card
 content:
+  field_event_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_media_image:
     type: entity_reference_entity_view
     label: hidden
@@ -30,9 +45,13 @@ content:
     region: content
 hidden:
   body: true
-  field_category: true
-  field_event_date: true
+  field_capacity: true
+  field_difficulty_level: true
+  field_event_type: true
+  field_location: true
+  field_organizer: true
   field_registration: true
+  field_season: true
   field_summary: true
   field_tags: true
   links: true

@@ -1,0 +1,27 @@
+Feature: Event Manager Registration
+  In order to manage events
+  As a user with the event_manager role
+  I need to ensure the organizer fields are set correctly
+
+  Scenario: Register as Event Manager
+    Given I am on "/user/register"
+    When I fill in "Username" with "event_manager_user"
+    And I fill in "Email" with "event_manager_user@example.com"
+    And I fill in "Password" with "password"
+    And I fill in "Confirm password" with "password"
+    And I check "Register as Event Manager"
+    And I press "Create new account"
+    Then I should see "Registration successful. You are now logged in."
+
+    # Verify user fields
+    When I visit "/user/event_manager_user/edit"
+    Then the "Organizer Name" field should contain "event_manager_user"
+    And the "Organizer Bio" field should be empty
+    And the "Organizer Contact Info" field should be empty
+    And the "Organizer Photo" field should be empty
+    And the "Organizer Social Media Links" field should be empty
+    And the "Organizer Website" field should be empty
+    And the "Organizer Address" field should be empty
+    And the "Organizer Certification or Credentials" field should be empty
+    And the "Organizer Availability" field should be empty
+    And the "Organizer Role Description" field should be empty

@@ -1,16 +1,16 @@
-uuid: 1413c3cc-52bd-47b8-bff2-5ff9043103c3
+uuid: 319d09f8-b55d-496e-838f-23fcaa440dad
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_category
+    - field.storage.node.field_season
     - node.type.event
-    - taxonomy.vocabulary.event_category
-id: node.event.field_category
-field_name: field_category
+    - taxonomy.vocabulary.season
+id: node.event.field_season
+field_name: field_season
 entity_type: node
 bundle: event
-label: Category
+label: Season
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      event_category: event_category
+      season: season
     sort:
       field: name
       direction: asc
