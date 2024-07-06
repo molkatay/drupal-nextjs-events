@@ -46,7 +46,20 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs/:/logs/
-
+  chrome:
+    image: selenium/standalone-chrome:3.141
+    container_name: "${PROJECT_NAME}_chrome"
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "4444:4444"
+    entrypoint:
+      - chromedriver
+      - "--no-sandbox"
+      - "--disable-dev-shm-usage"
+      - "--log-path=/tmp/chromedriver.log"
+      - "--verbose"
+      - "--whitelisted-ips="
   node:
     labels:
       - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"

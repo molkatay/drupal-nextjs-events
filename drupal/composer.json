@@ -16,11 +16,6 @@
     ],
     "require": {
         "ext-redis": "*",
-        "behat/behat": "^3.14",
-        "behat/mink": "^1.9",
-        "behat/mink-browserkit-driver": "^2.2",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "^2.0",
         "composer/installers": "^2.2",
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.4",
@@ -109,6 +104,7 @@
         "drupal/webprofiler": "^10.1",
         "drupal/xmlsitemap": "^1.5",
         "drush/drush": "^12",
+
         "mnsami/composer-custom-directory-installer": "^2.0",
         "symfony/http-client": "^6.4",
         "theodo-group/llphant": "^0.6.0"
@@ -204,7 +200,16 @@
         }
     },
     "require-dev": {
+        "behat/behat": "^3.14",
+        "behat/mink": "^1.9",
+        "behat/mink-browserkit-driver": "^2.2",
+        "behat/mink-extension": "^2.2",
+        "behat/mink-goutte-driver": "^2.0",
+        "behat/mink-selenium2-driver": "^1.7",
+        "drevops/behat-screenshot": "^1.5",
         "drupal/drupal-extension": "^5.0",
+        "emuse/behat-html-formatter": "^2.0",
+        "jakoch/phantomjs-installer": "^2.1",
         "phpmd/phpmd": "^2.15",
         "phpspec/prophecy": "^1.18",
         "phpspec/prophecy-phpunit": "^2.1",

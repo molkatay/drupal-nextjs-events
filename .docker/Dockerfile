@@ -1,7 +1,5 @@
 FROM php:8.2-fpm
 
-MAINTAINER Molka Tayahi <tayahi.molka@gmail.com>
-
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
