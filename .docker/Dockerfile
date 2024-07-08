@@ -1,7 +1,5 @@
 FROM php:8.2-fpm
 
-MAINTAINER Molka Tayahi <tayahi.molka@gmail.com>
-
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -17,8 +15,15 @@ RUN apt-get update && \
         libreadline-dev \
         git \
         unzip \
-        supervisor
+        supervisor \
+      curl
 
+# Add NodeSource repository for Node.js 18 and install Node.js
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
+
+# Verify Node.js installation
+RUN node -v && npm -v
 #####################################
 # PHP Extensions
 #####################################

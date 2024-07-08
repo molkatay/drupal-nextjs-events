@@ -4,10 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.field_category
+    - field.field.node.event.field_capacity
+    - field.field.node.event.field_difficulty_level
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_location
     - field.field.node.event.field_media_image
+    - field.field.node.event.field_organizer
     - field.field.node.event.field_registration
+    - field.field.node.event.field_season
     - field.field.node.event.field_summary
     - field.field.node.event.field_tags
     - node.type.event
@@ -28,13 +33,22 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_category:
+  field_capacity:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_difficulty_level:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 114
     region: content
   field_event_date:
     type: datetime_default
@@ -45,6 +59,22 @@ content:
     third_party_settings: {  }
     weight: 103
     region: content
+  field_event_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 115
+    region: content
   field_media_image:
     type: entity_reference_entity_view
     label: above
@@ -53,6 +83,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 111
+    region: content
+  field_organizer:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 118
     region: content
   field_registration:
     type: webform_entity_reference_link
@@ -63,6 +101,14 @@ content:
       attributes: {  }
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_season:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 116
     region: content
   field_summary:
     type: text_default

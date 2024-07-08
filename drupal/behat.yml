@@ -10,6 +10,6 @@ default:
   extensions:
     Behat\MinkExtension:
       goutte: ~
-      base_url: 'http://druxt-events.com/'
+      base_url: 'http://web/'
     Drupal\DrupalExtension:
       blackbox: ~

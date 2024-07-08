@@ -1,0 +1,9 @@
+uuid: c63e2158-cedc-4f52-aa4f-56f6a9aaec47
+langcode: en
+status: true
+dependencies: {  }
+name: 'Difficulty Level'
+vid: difficulty_level
+description: null
+weight: 0
+new_revision: false

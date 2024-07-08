@@ -1,0 +1,25 @@
+/**
+* @file
+* Card component which includes title components.
+*/
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  max-width: 46rem;
+  overflow: hidden;
+}
+
+/* Using flex-grow to allow date to be positioned at the bottom of the card by
+using margin-top: auto in the date wrapper field below. */
+.card__content {
+  padding: 2rem;
+
+  /* For consistent top/bottom spacing for all fields in the card. */
+  > * {
+    margin-block-end: 1.4rem;
+  }
+}
+
+.card__title {
+  margin-block-start: 0;
+}
