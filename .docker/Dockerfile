@@ -15,8 +15,15 @@ RUN apt-get update && \
         libreadline-dev \
         git \
         unzip \
-        supervisor
+        supervisor \
+      curl
 
+# Add NodeSource repository for Node.js 18 and install Node.js
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
+
+# Verify Node.js installation
+RUN node -v && npm -v
 #####################################
 # PHP Extensions
 #####################################

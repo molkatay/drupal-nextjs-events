@@ -1,0 +1,27 @@
+name: storybook
+type: theme
+'base theme': false
+version: 1.0.0
+libraries:
+  - storybook/base
+  - storybook/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - storybook/user
+  core/drupal.dropbutton:
+    - storybook/dropbutton
+  core/drupal.dialog:
+    - storybook/dialog
+  file/drupal.file:
+    - storybook/file
+  core/drupal.progress:
+    - storybook/progress
+description: ''
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.3.1'
+
+components:
+  namespaces:
+    atoms: src/components/01-atoms
+    molecules: src/components/02-molecules

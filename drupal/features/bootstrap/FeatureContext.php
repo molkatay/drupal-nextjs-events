@@ -3,11 +3,14 @@
 use Behat\Behat\Context\Context;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Mink\Exception\ExpectationException;
-
+use Drupal\user\Entity\User;
 /**
  * Defines application features from the specific context.
  */
 class FeatureContext extends RawDrupalContext implements Context {
+
+  private $createdUsers = [];
+
 
   /**
    * Initializes context.
@@ -20,24 +23,26 @@ class FeatureContext extends RawDrupalContext implements Context {
   }
 
   /**
-   * @Given I am logged in as a user with the :role role
-   */
-  public function iAmLoggedInAsAUserWithTheRole($role) {
-    // Create and login user with the specified role.
-    $user = $this->createUser([], $role);
-    $this->login($user);
-  }
-
-  /**
-   * Create a user with given roles.
-   */
-  protected function createUser(array $permissions = [], $role = '') {
-    $user = $this->getDriver('drupal')->userCreate(['name' => 'test_user_' . uniqid(), 'pass' => 'password'], $permissions);
-    if ($role) {
-      $this->getDriver('drupal')->userAddRole($user, $role);
+     * @Given I am logged in as a user with the role :role
+     */
+    public function iAmLoggedInAsAUserWithTheRole($role) {
+      $user = $this->createUser([], $role);
+      $this->login($user);
     }
-    return $user;
-  }
+
+
+    /**
+     * Create a user with given roles.
+     */
+    protected function createUser(array $permissions = [], $role = '') {
+      // Generate a unique username
+      $username = 'test_user_' . uniqid();
+      $user = $this->getDriver('drupal')->userCreate(['name' => $username, 'pass' => 'password'], $permissions);
+      if ($role) {
+        $this->getDriver('drupal')->userAddRole($user, $role);
+      }
+      return $user;
+    }
 
   /**
    * Login a user.
@@ -51,34 +56,36 @@ class FeatureContext extends RawDrupalContext implements Context {
   }
 
   /**
-   * @Then the :field field should contain :value
+   * @When I attach the media file :filePath to :field
    */
-  public function theFieldShouldContain($field, $value) {
-    $page = $this->getSession()->getPage();
-    $fieldElement = $page->findField($field);
+  public function iAttachTheMediaFileTo($filePath, $field) {
+    $fieldElement = $this->getSession()->getPage()->findField($field);
     if ($fieldElement === null) {
-      throw new ExpectationException(sprintf('Field "%s" not found on the page.', $field), $this->getSession()->getDriver());
+      throw new \Exception(sprintf('Field "%s" not found on the page.', $field));
     }
-    $fieldValue = $fieldElement->getValue();
-    if ($fieldValue !== $value) {
-      throw new ExpectationException(sprintf('Expected field "%s" to contain "%s", but found "%s".', $field, $value, $fieldValue), $this->getSession()->getDriver());
-    }
+    $fieldElement->attachFile($filePath);
   }
 
   /**
-   * @Then the :field field should be empty
+   * @Then I should see an image with alt text :altText
    */
-  public function theFieldShouldBeEmpty($field) {
+  public function iShouldSeeAnImageWithAltText($altText) {
     $page = $this->getSession()->getPage();
-    $fieldElement = $page->findField($field);
-    if ($fieldElement === null) {
-      throw new ExpectationException(sprintf('Field "%s" not found on the page.', $field), $this->getSession()->getDriver());
-    }
-    $fieldValue = $fieldElement->getValue();
-    if (!empty($fieldValue)) {
-      throw new ExpectationException(sprintf('Expected field "%s" to be empty, but found "%s".', $field, $fieldValue), $this->getSession()->getDriver());
+    $image = $page->find('css', 'img[alt="' . $altText . '"]');
+    if ($image === null) {
+      throw new ExpectationException(sprintf('No image found with alt text "%s".', $altText), $this->getSession()->getDriver());
     }
   }
-
-
+    /**
+     * @AfterScenario
+     */
+    public function cleanUp() {
+      // Delete created users
+      foreach ($this->createdUsers as $uid) {
+        $user = User::load($uid);
+        if ($user) {
+          $user->delete();
+        }
+      }
+    }
 }

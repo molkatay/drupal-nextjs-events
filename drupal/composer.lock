@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2804175ee266155f27b452604a4e41b6",
+    "content-hash": "1fe332a2303b5eb2b0c4c90246e62610",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -527,16 +527,16 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "a5af40bd4b6edee5101e182085e67b7ff5d4a89b"
+                "reference": "3e679cd280169109ab6f9d7bff0d069e14d309ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/a5af40bd4b6edee5101e182085e67b7ff5d4a89b",
-                "reference": "a5af40bd4b6edee5101e182085e67b7ff5d4a89b",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/3e679cd280169109ab6f9d7bff0d069e14d309ac",
+                "reference": "3e679cd280169109ab6f9d7bff0d069e14d309ac",
                 "shasum": ""
             },
             "require": {
@@ -585,9 +585,9 @@
             ],
             "support": {
                 "issues": "https://github.com/commerceguys/addressing/issues",
-                "source": "https://github.com/commerceguys/addressing/tree/v2.2.0"
+                "source": "https://github.com/commerceguys/addressing/tree/v2.2.1"
             },
-            "time": "2024-02-25T11:22:16+00:00"
+            "time": "2024-07-04T15:28:57+00:00"
         },
         {
             "name": "composer/installers",
@@ -2772,6 +2772,55 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/checklistapi",
                 "issues": "https://www.drupal.org/project/issues/checklistapi"
+            }
+        },
+        {
+            "name": "drupal/components",
+            "version": "3.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/components.git",
+                "reference": "3.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/components-3.0.0-beta3.zip",
+                "reference": "3.0.0-beta3",
+                "shasum": "47ced4332f0a655ca38ae1b54e97a8e78d59f0bc"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta3",
+                    "datestamp": "1651759488",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095",
+                    "email": "virtually.johnalbin@gmail.com"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                }
+            ],
+            "description": "Registers folders of components defined by your theme or module as Twig namespaces",
+            "homepage": "https://drupal.org/project/components",
+            "support": {
+                "source": "https://git.drupalcode.org/project/components"
             }
         },
         {
@@ -9638,20 +9687,20 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "v5.2.13",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsonrainbow/json-schema.git",
-                "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793"
+                "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
-                "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8",
+                "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
@@ -9662,11 +9711,6 @@
                 "bin/validate-json"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "JsonSchema\\": "src/JsonSchema/"
@@ -9702,9 +9746,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jsonrainbow/json-schema/issues",
-                "source": "https://github.com/jsonrainbow/json-schema/tree/v5.2.13"
+                "source": "https://github.com/jsonrainbow/json-schema/tree/5.3.0"
             },
-            "time": "2023-09-26T02:20:38+00:00"
+            "time": "2024-07-06T21:00:26+00:00"
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -17418,16 +17462,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.11.6",
+            "version": "1.11.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "6ac78f1165346c83b4a753f7e4186d969c6ad0ee"
+                "reference": "52d2bbfdcae7f895915629e4694e9497d0f8e28d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6ac78f1165346c83b4a753f7e4186d969c6ad0ee",
-                "reference": "6ac78f1165346c83b4a753f7e4186d969c6ad0ee",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/52d2bbfdcae7f895915629e4694e9497d0f8e28d",
+                "reference": "52d2bbfdcae7f895915629e4694e9497d0f8e28d",
                 "shasum": ""
             },
             "require": {
@@ -17472,7 +17516,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-01T15:33:06+00:00"
+            "time": "2024-07-06T11:17:41+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -18988,6 +19032,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/behat_ui": 15,
+        "drupal/components": 10,
         "drupal/content_language_access": 10,
         "drupal/decoupled_domain": 10,
         "drupal/decoupled_preview": 10,
