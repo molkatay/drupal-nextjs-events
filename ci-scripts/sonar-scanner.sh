@@ -13,24 +13,24 @@ if ! command -v $PHPUNIT_BIN &> /dev/null; then
     echo "[PRE-COMMIT] Please run 'composer install' or check the path: $PHPUNIT_BIN"
     exit 1
 fi
-container_name="bose_sonarqube"
+container_name="sonarqube"
 
 container_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$container_name")
 
 
 # Run SonarQube analysis
-docker run  --rm -v $PWD:/usr/src --link bose_sonarqube --net my_drupal9_decoupled_sonar newtmitch/sonar-scanner sonar-scanner \
--Dsonar.projectKey=DECOUPLED-DRUPAL \
+docker run  --rm -v $PWD:/usr/src --link sonarqube --net my_drupal9_decoupled_sonar newtmitch/sonar-scanner sonar-scanner \
+-Dsonar.projectKey=Druxt-events \
 -Dsonar.sources=$STAGED_FILES_STRING \
 -Dsonar.qualitygate.wait=true \
 -Dsonar.host.url=http://$container_ip:9000 \
--Dsonar.token=sqp_f0ff5b898868a21c5309f7b77eab60c5a6fc0b51 \
+-Dsonar.token=sqp_abea744536a72429cfb6bc57905c0615def0af8b \
 -Dsonar.php.coverage.reportPaths=drupal/drupal-coverage.xml \
 -Dsonar.language=php \
 -Dsonar.exclusions=**/vendor/**,**/libraries/**,**/node_modules/**,**/core/**,**/sites/**,**/contrib/**,**/contrib-orange/**,**/drush/**,**/files/**,**/default* \
 -Dsonar.scm.exclusions.disabled=true \
 -Dsonar.login=admin \
--Dsonar.password=SuPeRsEcReT \
+-Dsonar.password=molka \
 -Dsonar.sourceEncoding=UTF-8 \
 -Dsonar.php.tests.reportPath=drupal/build/phpunit.xml
 
