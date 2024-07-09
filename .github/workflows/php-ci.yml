@@ -44,8 +44,8 @@ jobs:
     - name: Run PHPCS
       working-directory: ./drupal
       run: |
-        ./vendor/bin/phpcs --standard=Drupal src/
-        ./vendor/bin/phpcs --standard=Drupal src/ --report=checkstyle --report-file=build/logs/phpcs.xml
+        ./vendor/bin/phpcs --standard=Drupal web/
+        ./vendor/bin/phpcs --standard=Drupal web/ --report=checkstyle --report-file=build/logs/phpcs.xml
 
     - name: Run PHPUnit tests
       working-directory: ./drupal
