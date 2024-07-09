@@ -27,13 +27,13 @@ docker run  --rm -v $PWD:/usr/src --link sonarqube --net my_drupal9_decoupled_so
 -Dsonar.token=sqp_abea744536a72429cfb6bc57905c0615def0af8b \
 -Dsonar.php.coverage.reportPaths=drupal/drupal-coverage.xml \
 -Dsonar.language=php \
--Dsonar.exclusions=**/vendor/**,**/libraries/**,**/node_modules/**,**/core/**,**/sites/**,**/contrib/**,**/contrib-orange/**,**/drush/**,**/files/**,**/default* \
+-Dsonar.exclusions=**/vendor/**,**/libraries/**,**/node_modules/**,**/core/**,**/sites/**,**/contrib/**,**/drush/**,**/files/**,**/default* \
 -Dsonar.scm.exclusions.disabled=true \
 -Dsonar.login=admin \
 -Dsonar.password=molka \
 -Dsonar.sourceEncoding=UTF-8 \
--Dsonar.php.tests.reportPath=drupal/build/phpunit.xml
-
+-Dsonar.security.php.rules=true \
+-Dsonar.security.javascript.rules=true
 # Continue with the commit if SonarQube analysis passes
   if [ $? -ne 0 ]; then
     echo "SonarQube analysis failed. Commit aborted."

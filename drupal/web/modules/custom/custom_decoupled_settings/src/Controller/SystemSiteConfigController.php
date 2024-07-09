@@ -74,7 +74,7 @@ class SystemSiteConfigController extends ControllerBase {
         "meta" => [
           "links" => [
             "self" => [
-              "href" => "http://jsonapi.org/format/1.0/",
+              "href" => "https://jsonapi.org/format/1.0/",
             ],
           ],
         ],
