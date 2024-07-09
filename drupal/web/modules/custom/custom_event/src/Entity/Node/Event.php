@@ -11,5 +11,6 @@ use Drupal\node\Entity\Node;
  */
 final class Event extends Node {
 
-    public const BUNDLE = "event";
+  public const BUNDLE = "event";
+
 }

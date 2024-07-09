@@ -1,0 +1,36 @@
+name: React CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout React project
+      uses: actions/checkout@v4
+      with:
+        repository: molkatay/magic-events
+        path: react
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      working-directory: ./
+      run: npm install
+
+    - name: Build project
+      working-directory: ./
+      run: npm run build
+

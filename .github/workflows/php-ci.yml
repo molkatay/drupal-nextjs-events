@@ -1,4 +1,4 @@
-name: PHP Composer
+name: PHP CI
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout PHP project
       uses: actions/checkout@v4
 
     - name: Set up PHP
@@ -44,11 +44,9 @@ jobs:
     - name: Run PHPCS
       working-directory: ./drupal
       run: |
-        ./vendor/bin/phpcs --standard=Drupal web/
-        # Generate report in XML format for SonarQube
-        ./vendor/bin/phpcs --standard=Drupal web/ --report=checkstyle --report-file=build/logs/phpcs.xml
+        ./vendor/bin/phpcs --standard=PSR12 src/
+        ./vendor/bin/phpcs --standard=PSR12 src/ --report=checkstyle --report-file=build/logs/phpcs.xml
 
     - name: Run PHPUnit tests
       working-directory: ./drupal
       run: ./vendor/bin/phpunit --log-junit build/logs/phpunit.xml
-

@@ -49,12 +49,12 @@ for FILE in $STAGED_FILES; do
             echo "[PRE-COMMIT] Running PHP Code Beautifier and Fixer..."
 
             # You can change your PHPCBF command here
-            $PHPCBF_BIN -n $FILE  --standard=PSR12
+            $PHPCBF_BIN -n $FILE
 
             echo "[PRE-COMMIT] Checking PHPCS again..."
 
             # You can change your PHPCS command here
-            $PHPCS_BIN -n $FILE  --standard=PSR12
+            $PHPCS_BIN -n $FILE
 
             if [ $? != 0 ]
             then
