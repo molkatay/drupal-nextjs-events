@@ -22,14 +22,14 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y docker-compose
 
     - name: Start Docker Compose
-      run: docker-compose -f .docker/docker-compose.yml up -d
+      run: docker-compose -f docker-compose.yml up -d
 
     - name: Wait for services to be healthy
       run: |
-        docker-compose -f .docker/docker-compose.yml exec php bash -c "while ! nc -z localhost 9000; do sleep 1; done"
+        docker-compose -f docker-compose.yml exec php bash -c "while ! nc -z localhost 9000; do sleep 1; done"
 
     - name: Validate composer.json and composer.lock
-      run: docker-compose -f .docker/docker-compose.yml exec php composer validate --strict
+      run: docker-compose -f docker-compose.yml exec php composer validate --strict
 
     - name: Cache Composer packages
       id: composer-cache
@@ -41,16 +41,16 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: docker-compose -f .docker/docker-compose.yml exec php composer install --prefer-dist --no-progress
+      run: docker-compose -f docker-compose.yml exec php composer install --prefer-dist --no-progress
 
     - name: Run PHPCS
       run: |
-        docker-compose -f .docker/docker-compose.yml exec php phpcs --standard=Drupal web/
-        docker-compose -f .docker/docker-compose.yml exec php phpcs --standard=Drupal web/ --report=checkstyle --report-file=build/logs/phpcs.xml
+        docker-compose -f docker-compose.yml exec php phpcs --standard=Drupal web/
+        docker-compose -f .docker-compose.yml exec php phpcs --standard=Drupal web/ --report=checkstyle --report-file=build/logs/phpcs.xml
 
     - name: Run PHPUnit tests
-      run: docker-compose -f .docker/docker-compose.yml exec php ./vendor/bin/phpunit --log-junit build/logs/phpunit.xml
+      run: docker-compose -f docker-compose.yml exec php ./vendor/bin/phpunit --log-junit build/logs/phpunit.xml
 
     - name: Tear down Docker Compose
       if: always()
-      run: docker-compose -f .docker/docker-compose.yml down
+      run: docker-compose -f docker-compose.yml down
