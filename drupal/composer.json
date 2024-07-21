@@ -100,11 +100,12 @@
         "drupal/varnish_purge": "^2.2",
         "drupal/view_unpublished": "^1.2",
         "drupal/views_bulk_operations": "^4.2",
+        "drupal/views_taxonomy_term_name_into_id": "^1.0@RC",
         "drupal/webform": "^6.2",
         "drupal/webform_rest": "^4.0",
         "drupal/webprofiler": "^10.1",
         "drupal/xmlsitemap": "^1.5",
-        "drush/drush": "^12",
+        "drush/drush": "^12.4",
         "mnsami/composer-custom-directory-installer": "^2.0",
         "symfony/http-client": "^6.4",
         "theodo-group/llphant": "^0.6.0"

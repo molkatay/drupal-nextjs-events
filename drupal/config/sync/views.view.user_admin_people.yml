@@ -498,6 +498,7 @@ display:
         type: role
         options:
           role:
+            administrator: administrator
             moderator: moderator
       cache:
         type: tag
@@ -907,10 +908,17 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      access:
+        type: perm
+        options:
+          perm: 'administer users'
       defaults:
+        access: false
         show_admin_links: false
       show_admin_links: false
-      display_extenders: {  }
+      display_extenders:
+        jsonapi_views:
+          enabled: true
       path: admin/people/list
       menu:
         type: 'default tab'
@@ -932,7 +940,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
+        - user.permissions
       tags: {  }
   page_2:
     id: page_2
@@ -1382,7 +1390,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            moderator: moderator
       defaults:
+        access: false
         show_admin_links: false
         fields: false
       display_description: ''

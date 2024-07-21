@@ -15,11 +15,13 @@ module:
   breakpoint: 0
   ckeditor5: 0
   comment: 0
+  components: 0
   config: 0
   consumers: 0
   contact: 0
   contextual: 0
   core_event_dispatcher: 0
+  ctools: 0
   custom_decoupled_settings: 0
   custom_event: 0
   custom_oauth: 0
@@ -127,4 +129,5 @@ module:
 theme:
   olivero: 0
   claro: 0
+  stable9: 0
 profile: standard
