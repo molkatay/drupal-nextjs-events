@@ -32,5 +32,6 @@ content:
 hidden:
   created: true
   field_media_svg: true
+  langcode: true
   name: true
   uid: true

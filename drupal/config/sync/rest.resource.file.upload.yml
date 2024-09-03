@@ -1,0 +1,23 @@
+uuid: 7ba6033c-8b0f-44cf-bd45-33f665bb5c89
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - schemata_json_schema
+    - serialization
+    - simple_oauth
+    - user
+id: file.upload
+plugin_id: 'file:upload'
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - 'schema_json:json'
+    - json
+    - schema_json
+  authentication:
+    - oauth2
+    - cookie

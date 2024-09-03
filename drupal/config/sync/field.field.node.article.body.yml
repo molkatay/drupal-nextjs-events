@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - filter.format.full_html
     - node.type.article
   module:
     - text
@@ -20,7 +21,8 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
   required_summary: false
-  allowed_formats: {  }
+  allowed_formats:
+    - full_html
 field_type: text_with_summary

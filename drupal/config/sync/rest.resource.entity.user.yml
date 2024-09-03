@@ -14,11 +14,10 @@ configuration:
   methods:
     - GET
     - POST
-    - PATCH
   formats:
     - 'schema_json:json'
     - json
     - schema_json
   authentication:
-    - oauth2
-    - cookie
+    1: oauth2
+    2: cookie

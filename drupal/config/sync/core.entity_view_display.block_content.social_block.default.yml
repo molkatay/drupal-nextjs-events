@@ -1,0 +1,23 @@
+uuid: 2a54d67f-b3ac-4b94-be44-ce4c4587361f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_block
+    - field.field.block_content.social_block.field_social
+  module:
+    - social_links
+id: block_content.social_block.default
+targetEntityType: block_content
+bundle: social_block
+mode: default
+content:
+  field_social:
+    type: social_link_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -33,4 +33,3 @@ jobs:
     - name: Build project
       working-directory: ./react
       run: npm run build
-
