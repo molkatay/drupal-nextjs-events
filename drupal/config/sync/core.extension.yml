@@ -1,12 +1,10 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
-  address: 0
   allowed_formats: 0
   amswap: 0
   announcements_feed: 0
   automated_cron: 0
-  basic_auth: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -15,20 +13,18 @@ module:
   breakpoint: 0
   ckeditor5: 0
   comment: 0
-  components: 0
   config: 0
   consumers: 0
   contact: 0
   contextual: 0
   core_event_dispatcher: 0
-  ctools: 0
   custom_decoupled_settings: 0
-  custom_event: 0
   custom_oauth: 0
   datetime: 0
   dblog: 0
   decoupled_preview: 0
   decoupled_router: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -41,16 +37,16 @@ module:
   image: 0
   inline_form_errors: 0
   jsonapi: 0
+  jsonapi_boost: 0
   jsonapi_defaults: 0
-  jsonapi_event_dispatcher: 0
   jsonapi_extras: 0
   jsonapi_hypermedia: 0
   jsonapi_image_styles: 0
   jsonapi_menu_items: 0
   jsonapi_pathauto_breadcrumbs: 0
   jsonapi_resources: 0
+  jsonapi_user_resources: 0
   jsonapi_views: 0
-  layout_builder: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -58,8 +54,6 @@ module:
   media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
-  navigation: 0
-  navigation_top_bar: 0
   next: 0
   next_jsonapi: 0
   node: 0
@@ -67,13 +61,11 @@ module:
   openapi_jsonapi: 0
   openapi_ui: 0
   openapi_ui_swagger: 0
-  openid_connect: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
   pgsql: 0
-  phpass: 0
   purge: 0
   purge_drush: 0
   purge_processor_cron: 0
@@ -104,16 +96,15 @@ module:
   system: 0
   taxonomy: 0
   taxonomy_access_fix: 0
-  telephone: 0
   text: 0
   token: 0
   toolbar: 0
-  typed_entity: 0
   update: 0
   user: 0
-  user_registrationpassword: 0
+  users_jwt: 0
   view_unpublished: 0
   views_ui: 0
+  warmer: 0
   webform: 0
   webform_node: 0
   webform_options_limit: 0
@@ -121,7 +112,6 @@ module:
   webform_scheduled_email: 0
   webform_share: 0
   webform_ui: 0
-  workspaces: 0
   menu_admin_per_menu: 1
   pathauto: 1
   views: 10
@@ -129,5 +119,4 @@ module:
 theme:
   olivero: 0
   claro: 0
-  stable9: 0
 profile: standard

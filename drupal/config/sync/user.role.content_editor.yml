@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.image
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
@@ -10,6 +11,7 @@ dependencies:
     - comment
     - contextual
     - file
+    - media
     - node
     - path
     - system
@@ -27,18 +29,23 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
+  - 'administer media'
   - 'administer url aliases'
   - 'create article content'
+  - 'create image media'
+  - 'create media'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own files'
+  - 'delete own image media'
   - 'delete own page content'
   - 'delete page revisions'
   - 'edit own article content'
   - 'edit own comments'
+  - 'edit own image media'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'

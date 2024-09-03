@@ -1,0 +1,23 @@
+uuid: e7a208b7-cd1d-45d9-8768-2bd0efa72901
+langcode: en
+status: true
+dependencies:
+  module:
+    - schemata_json_schema
+    - serialization
+    - simple_oauth
+    - user
+    - webform_rest
+id: webform_rest_elements
+plugin_id: webform_rest_elements
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - 'schema_json:json'
+    - json
+    - schema_json
+  authentication:
+    - oauth2
+    - cookie

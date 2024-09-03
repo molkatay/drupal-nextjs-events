@@ -4,15 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.field_capacity
-    - field.field.node.event.field_difficulty_level
+    - field.field.node.event.field_category
     - field.field.node.event.field_event_date
-    - field.field.node.event.field_event_type
-    - field.field.node.event.field_location
     - field.field.node.event.field_media_image
-    - field.field.node.event.field_organizer
     - field.field.node.event.field_registration
-    - field.field.node.event.field_season
     - field.field.node.event.field_summary
     - field.field.node.event.field_tags
     - node.type.event
@@ -29,7 +24,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 7
+    weight: 121
     region: content
     settings:
       rows: 9
@@ -39,51 +34,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_capacity:
-    type: number
-    weight: 16
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_difficulty_level:
-    type: options_select
-    weight: 13
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_event_date:
-    type: datetime_default
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_event_type:
-    type: options_select
-    weight: 12
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_location:
-    type: options_select
-    weight: 14
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_media_image:
-    type: media_library_widget
-    weight: 8
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_organizer:
+  field_category:
     type: entity_reference_autocomplete
-    weight: 17
+    weight: 125
     region: content
     settings:
       match_operator: CONTAINS
@@ -91,23 +48,30 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_event_date:
+    type: datetime_default
+    weight: 123
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_image:
+    type: media_library_widget
+    weight: 121
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
   field_registration:
     type: webform_entity_reference_select
-    weight: 10
+    weight: 124
     region: content
     settings:
       default_data: true
       webforms: {  }
     third_party_settings: {  }
-  field_season:
-    type: options_select
-    weight: 15
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_summary:
     type: text_textarea
-    weight: 11
+    weight: 126
     region: content
     settings:
       rows: 5
@@ -115,7 +79,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 1
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -125,27 +89,34 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 4
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -153,7 +124,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -161,5 +132,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  sticky: true
+hidden: {  }

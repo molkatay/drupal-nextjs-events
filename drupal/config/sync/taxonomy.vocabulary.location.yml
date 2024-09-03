@@ -1,9 +1,0 @@
-uuid: 80062ce8-2cda-4c44-a73f-2676d586c526
-langcode: en
-status: true
-dependencies: {  }
-name: Location
-vid: location
-description: null
-weight: 0
-new_revision: false

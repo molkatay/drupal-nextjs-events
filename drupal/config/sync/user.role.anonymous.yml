@@ -4,15 +4,17 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
-    - rest.resource.user_registration
+    - node.type.article
     - rest.resource.webform_rest_submit
   module:
     - comment
     - contact
     - filter
     - media
+    - node
     - rest
     - search
+    - simple_oauth
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
@@ -24,7 +26,8 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'restful post user_registration'
+  - 'create article content'
+  - 'grant simple_oauth codes'
   - 'restful post webform_rest_submit'
   - 'search content'
   - 'use text format restricted_html'

@@ -1,9 +1,9 @@
-uuid: 2357b708-1df7-4f2f-8025-89092a8d1f9c
+uuid: d0d6adc3-77b5-4ef0-a3d2-0cbd4646ca86
 langcode: en
 status: true
 dependencies: {  }
-name: Season
-vid: season
+name: 'Event Category'
+vid: event_category
 description: null
 weight: 0
 new_revision: false

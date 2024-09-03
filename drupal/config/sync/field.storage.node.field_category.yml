@@ -1,12 +1,12 @@
-uuid: 949e679d-4b40-48cb-a56b-83868ef474db
+uuid: aee634f4-ab62-4f02-8200-50a2646d1241
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-id: node.field_season
-field_name: field_season
+id: node.field_category
+field_name: field_category
 entity_type: node
 type: entity_reference
 settings:

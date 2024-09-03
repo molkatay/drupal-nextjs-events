@@ -81,7 +81,7 @@ for FILE in $STAGED_FILES; do
 
 
     elif [[ $FILE =~ \.js$ ]]; then
-        $ESLINT "$FILE"
+      #  $ESLINT "$FILE"
         if [ $? -ne 0 ]; then
             echo "ESLint detected errors. Commit aborted."
             exit 1

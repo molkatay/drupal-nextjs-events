@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - schemata_json_schema
     - serialization
     - simple_oauth
     - user
@@ -14,6 +15,7 @@ configuration:
   methods:
     - POST
   formats:
+    - 'schema_json:json'
     - json
     - schema_json
   authentication:
