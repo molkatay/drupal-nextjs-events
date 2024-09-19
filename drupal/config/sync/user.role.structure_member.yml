@@ -1,0 +1,9 @@
+uuid: f28acc33-6778-47fd-bf54-31c113e56c84
+langcode: en
+status: true
+dependencies: {  }
+id: structure_member
+label: 'Structure Member'
+weight: 7
+is_admin: null
+permissions: {  }

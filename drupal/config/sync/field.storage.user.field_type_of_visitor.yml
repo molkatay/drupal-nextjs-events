@@ -1,0 +1,27 @@
+uuid: a8c83bcc-5b8a-4143-985a-4b2304e2ce97
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_type_of_visitor
+field_name: field_type_of_visitor
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: structure_member
+      label: 'Structure Member'
+    -
+      value: partner_organization
+      label: 'Partner Organization'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

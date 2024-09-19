@@ -1,0 +1,41 @@
+uuid: 4ff28037-6d0e-47ff-a03c-a0b713c540fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_structure_s_name
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      structure_member: structure_member
+      authenticated: 0
+      partner_organization: 0
+    user_additional_register_form:
+      structure_member: structure_member
+      authenticated: 0
+      partner_organization: 0
+id: user.user.field_structure_s_name
+field_name: field_structure_s_name
+entity_type: user
+bundle: user
+label: "Structure's Name"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: false
+field_type: entity_reference

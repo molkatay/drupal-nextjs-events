@@ -1,0 +1,77 @@
+event_manager:
+  event_manager:
+    path: /user/register/manager-event
+    url: /user/register/event_manager
+    redirect_path: ''
+    hidden: 0
+    form_mode_register: register
+    form_mode_edit: default
+  path: /user/register/manager-event
+  url: /user/register/event_manager
+  redirect_path: ''
+  hidden: 0
+  form_mode_register: register_event_manager
+  form_mode_edit: register_event_manager
+partner_organization:
+  event_manager:
+    event_manager:
+      path: /user/register/manager-event
+      url: /user/register/event_manager
+      redirect_path: ''
+      hidden: 0
+      form_mode_register: register
+      form_mode_edit: default
+    path: /user/register/manager-event
+    url: /user/register/event_manager
+    redirect_path: ''
+    hidden: 0
+    form_mode_register: register_event_manager
+    form_mode_edit: register_event_manager
+  path: /user/register/partner
+  url: /user/register/partner_organization
+  redirect_path: ''
+  hidden: 0
+  form_mode_register: partner_organization
+  form_mode_edit: partner_organization
+structure_member:
+  event_manager:
+    event_manager:
+      path: /user/register/manager-event
+      url: /user/register/event_manager
+      redirect_path: ''
+      hidden: 0
+      form_mode_register: register
+      form_mode_edit: default
+    path: /user/register/manager-event
+    url: /user/register/event_manager
+    redirect_path: ''
+    hidden: 0
+    form_mode_register: register_event_manager
+    form_mode_edit: register_event_manager
+  partner_organization:
+    event_manager:
+      event_manager:
+        path: /user/register/manager-event
+        url: /user/register/event_manager
+        redirect_path: ''
+        hidden: 0
+        form_mode_register: register
+        form_mode_edit: default
+      path: /user/register/manager-event
+      url: /user/register/event_manager
+      redirect_path: ''
+      hidden: 0
+      form_mode_register: register_event_manager
+      form_mode_edit: register_event_manager
+    path: /user/register/partner
+    url: /user/register/partner_organization
+    redirect_path: ''
+    hidden: 0
+    form_mode_register: partner_organization
+    form_mode_edit: partner_organization
+  path: /user/register/structure
+  url: /user/register/structure_member
+  redirect_path: ''
+  hidden: 0
+  form_mode_register: structure_member
+  form_mode_edit: structure_member

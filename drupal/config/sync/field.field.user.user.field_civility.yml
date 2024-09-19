@@ -1,0 +1,32 @@
+uuid: 8d0d1136-0667-40ee-ab79-2c3f8179760c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_civility
+  module:
+    - multiple_registration
+    - options
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: authenticated
+      partner_organization: 0
+      structure_member: 0
+    user_additional_register_form:
+      authenticated: 0
+      partner_organization: 0
+      structure_member: 0
+id: user.user.field_civility
+field_name: field_civility
+entity_type: user
+bundle: user
+label: Civility
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

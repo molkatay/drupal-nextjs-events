@@ -1,0 +1,51 @@
+uuid: ec6bac14-95c9-4fa9-ab75-2a877b81caff
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.structure_member
+    - field.field.user.user.field_civility
+    - field.field.user.user.field_country
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_name
+    - field.field.user.user.field_phone
+    - field.field.user.user.field_structure_s_name
+    - field.field.user.user.field_type_of_visitor
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.structure_member
+targetEntityType: user
+bundle: user
+mode: structure_member
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  contact: true
+  field_civility: true
+  field_country: true
+  field_last_name: true
+  field_name: true
+  field_phone: true
+  field_structure_s_name: true
+  field_type_of_visitor: true
+  langcode: true
+  language: true
+  path: true
+  timezone: true

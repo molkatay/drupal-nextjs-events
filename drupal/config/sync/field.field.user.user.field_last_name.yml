@@ -1,0 +1,31 @@
+uuid: 93bbdaf1-4fac-4263-b808-7df01d735ae5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_last_name
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: authenticated
+      partner_organization: partner_organization
+      structure_member: 0
+    user_additional_register_form:
+      authenticated: authenticated
+      partner_organization: partner_organization
+      structure_member: structure_member
+id: user.user.field_last_name
+field_name: field_last_name
+entity_type: user
+bundle: user
+label: 'Last Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

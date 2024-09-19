@@ -1,0 +1,33 @@
+uuid: 856d151e-f4c2-4f12-bf9a-0a4990a1f17e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_country
+  module:
+    - address
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: authenticated
+      partner_organization: partner_organization
+      structure_member: structure_member
+    user_additional_register_form:
+      authenticated: authenticated
+      partner_organization: partner_organization
+      structure_member: structure_member
+id: user.user.field_country
+field_name: field_country
+entity_type: user
+bundle: user
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country
