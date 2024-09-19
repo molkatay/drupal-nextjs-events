@@ -1,0 +1,14 @@
+uuid: bf985acb-92a7-4dd0-852c-bfc1fa930911
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.structure_member
+  module:
+    - user
+id: user_add_role_action.structure_member
+label: 'Add the Structure Member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: structure_member

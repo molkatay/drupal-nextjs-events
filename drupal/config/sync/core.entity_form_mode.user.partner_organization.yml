@@ -1,0 +1,11 @@
+uuid: f7b706a3-f861-4319-868b-baa9543e5107
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.partner_organization
+label: 'Partner Organization'
+description: ''
+targetEntityType: user
+cache: true

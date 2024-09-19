@@ -1,0 +1,9 @@
+uuid: af0c159b-3c72-4f94-a907-3912c20dfa75
+langcode: en
+status: true
+dependencies: {  }
+id: partner_organization
+label: 'Partner Organization'
+weight: 6
+is_admin: null
+permissions: {  }

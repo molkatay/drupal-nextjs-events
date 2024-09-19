@@ -3,11 +3,72 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_civility
+    - field.field.user.user.field_country
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_name
+    - field.field.user.user.field_phone
+    - field.field.user.user.field_structure_s_name
+    - field.field.user.user.field_type_of_visitor
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - address
+    - field_group
     - image
+    - telephone
     - user
+third_party_settings:
+  field_group:
+    group_type_of_visitor:
+      children:
+        - field_type_of_visitor
+      label: 'Type of visitor'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        show_step_title: true
+        step_description: ''
+        back_button_show: false
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_account_information:
+      children:
+        - field_name
+        - field_last_name
+        - account
+        - field_phone
+        - user_picture
+        - field_civility
+        - field_country
+        - field_structure_s_name
+      label: 'Account information'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+        show_step_title: true
+        step_description: 'Account information'
+        back_button_show: false
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
 id: user.user.default
@@ -16,13 +77,64 @@ bundle: user
 mode: default
 content:
   account:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_civility:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_country:
+    type: address_country_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_default
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_structure_s_name:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_type_of_visitor:
+    type: options_buttons
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   user_picture:
     type: image_image
-    weight: 1
+    weight: 6
     region: content
     settings:
       progress_indicator: throbber
@@ -30,6 +142,7 @@ content:
     third_party_settings: {  }
 hidden:
   contact: true
+  langcode: true
   language: true
   path: true
   timezone: true

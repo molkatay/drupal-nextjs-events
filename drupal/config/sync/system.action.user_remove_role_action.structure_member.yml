@@ -1,0 +1,14 @@
+uuid: 912b418f-2a85-4fcf-9725-13c00a171822
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.structure_member
+  module:
+    - user
+id: user_remove_role_action.structure_member
+label: 'Remove the Structure Member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: structure_member

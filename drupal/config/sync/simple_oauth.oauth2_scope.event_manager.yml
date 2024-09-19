@@ -1,0 +1,19 @@
+uuid: 63dd9cf4-4197-4a1f-a951-aa6a0d3143c7
+langcode: en
+status: true
+dependencies: {  }
+id: event_manager
+name: event_manager
+description: 'Event Manager'
+grant_types:
+  authorization_code:
+    status: true
+  client_credentials:
+    status: true
+  refresh_token:
+    status: true
+umbrella: false
+parent: null
+granularity: role
+permission: null
+role: event_manager

@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - node
-    - schemata_json_schema
     - serialization
     - simple_oauth
     - user
@@ -20,9 +19,8 @@ configuration:
     - DELETE
     - PATCH
   formats:
-    - 'schema_json:json'
-    - json
-    - schema_json
+    1: json
+    2: schema_json
   authentication:
     - oauth2
     - cookie

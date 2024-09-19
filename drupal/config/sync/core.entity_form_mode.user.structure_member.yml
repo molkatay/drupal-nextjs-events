@@ -1,0 +1,11 @@
+uuid: 616512c4-49ee-4f57-825b-ff574f31191f
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.structure_member
+label: 'Structure Member'
+description: ''
+targetEntityType: user
+cache: true

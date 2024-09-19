@@ -1,16 +1,21 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  address: 0
   allowed_formats: 0
   amswap: 0
   announcements_feed: 0
   automated_cron: 0
+  ban: 0
+  behat_ui: 0
   big_pipe: 0
   block: 0
   block_content: 0
   block_content_permissions: 0
   block_permissions: 0
   breakpoint: 0
+  captcha: 0
+  checklistapi: 0
   ckeditor5: 0
   comment: 0
   config: 0
@@ -19,6 +24,7 @@ module:
   contextual: 0
   core_event_dispatcher: 0
   custom_decoupled_settings: 0
+  custom_event: 0
   custom_oauth: 0
   datetime: 0
   dblog: 0
@@ -27,14 +33,24 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
+  entity_usage: 0
+  environment_indicator: 0
+  environment_indicator_ui: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  gin_login: 0
+  gin_toolbar: 0
+  git_deploy: 0
+  google_tag: 0
   help: 0
   history: 0
   hook_event_dispatcher: 0
   image: 0
+  image_captcha: 0
   inline_form_errors: 0
   jsonapi: 0
   jsonapi_boost: 0
@@ -47,6 +63,8 @@ module:
   jsonapi_resources: 0
   jsonapi_user_resources: 0
   jsonapi_views: 0
+  language: 0
+  layout_builder: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -54,18 +72,24 @@ module:
   media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
+  multiple_registration: 0
+  navigation: 0
+  navigation_top_bar: 0
   next: 0
-  next_jsonapi: 0
   node: 0
   openapi: 0
   openapi_jsonapi: 0
   openapi_ui: 0
   openapi_ui_swagger: 0
+  opquast_checklist: 0
   options: 0
   page_cache: 0
+  paragraphs_library: 0
   path: 0
   path_alias: 0
+  perimeter: 0
   pgsql: 0
+  photoswipe: 0
   purge: 0
   purge_drush: 0
   purge_processor_cron: 0
@@ -75,6 +99,8 @@ module:
   purge_queuer_coretags: 0
   purge_tokens: 0
   purge_ui: 0
+  redirect: 0
+  redirect_404: 0
   redirect_after_login: 0
   redis: 0
   rename_admin_paths: 0
@@ -83,11 +109,17 @@ module:
   schemata: 0
   schemata_json_schema: 0
   search: 0
+  search_api: 0
+  search_api_solr: 0
   seckit: 0
+  seo_checklist: 0
   serialization: 0
   shortcut: 0
+  simple_multistep: 0
   simple_oauth: 0
   simplify: 0
+  site_audit: 0
+  site_audit_report_entity: 0
   social_links: 0
   social_media_links: 0
   social_media_links_field: 0
@@ -95,14 +127,18 @@ module:
   svg_image_field: 0
   system: 0
   taxonomy: 0
-  taxonomy_access_fix: 0
+  telephone: 0
   text: 0
   token: 0
   toolbar: 0
+  tracer: 0
   update: 0
+  upgrade_rector: 0
+  upgrade_status: 0
   user: 0
   users_jwt: 0
   view_unpublished: 0
+  views_bulk_operations: 0
   views_ui: 0
   warmer: 0
   webform: 0
@@ -112,11 +148,13 @@ module:
   webform_scheduled_email: 0
   webform_share: 0
   webform_ui: 0
-  menu_admin_per_menu: 1
+  webprofiler: 0
   pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   olivero: 0
   claro: 0
+  gin: 0
 profile: standard

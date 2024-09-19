@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_civility
+    - field.field.user.user.field_country
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_name
+    - field.field.user.user.field_phone
+    - field.field.user.user.field_structure_s_name
+    - field.field.user.user.field_type_of_visitor
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -28,5 +35,13 @@ content:
     weight: 0
     region: content
 hidden:
+  field_civility: true
+  field_country: true
+  field_last_name: true
+  field_name: true
+  field_phone: true
+  field_structure_s_name: true
+  field_type_of_visitor: true
   langcode: true
   member_for: true
+  search_api_excerpt: true
