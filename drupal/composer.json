@@ -48,7 +48,7 @@
         "drupal/gin_login": "^2.1",
         "drupal/git_deploy": "^2.6",
         "drupal/google_tag": "^2.0",
-        "drupal/hook_event_dispatcher": "^4.0",
+        "drupal/hook_event_dispatcher": "^4.2",
         "drupal/index_now": "^2.0",
         "drupal/jsonapi_boost": "^2.0",
         "drupal/jsonapi_extras": "^3.26@beta",
@@ -193,11 +193,8 @@
             "drupal/composer_deploy": {
                 "Automated Drupal 11 compatibility fixes for composer_deploy": "https://www.drupal.org/files/issues/2024-03-16/composer_deploy.8.x-1.7.rector.patch"
             },
-            "drupal/hook_event_dispatcher": {
-                "Automated Drupal 11 compatibility fixes for hook_event_dispatcher": "https://www.drupal.org/files/issues/2024-07-15/hook_event_dispatcher.4.1.x-dev.rector.patch"
-            },
             "drupal/imageapi_optimize": {
-                "utomated Drupal 11": "https://www.drupal.org/files/issues/2024-04-04/imageapi_optimize.4.x-dev.rector.patch"
+                "Automated Drupal 11": "https://www.drupal.org/files/issues/2024-04-04/imageapi_optimize.4.x-dev.rector.patch"
             },
             "drupal/jsonapi_user_resources": {
                 "Automated Drupal 11 compatibility fixes for jsonapi_user_resources": "https://www.drupal.org/files/issues/2024-06-18/jsonapi_user_resources.1.x-dev.rector.patch"
