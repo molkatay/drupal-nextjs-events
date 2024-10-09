@@ -1,0 +1,15 @@
+file_gen_uploader.export:
+  path: '/file-gen-uploader/export'
+  defaults:
+    _title: 'Export'
+    _controller: '\Drupal\file_gen_uploader\Controller\ExportController'
+  requirements:
+    _permission: 'export file'
+file_gen_uploader.generate_pdf:
+  path: '/generate-pdf/{nid}'
+  defaults:
+    _controller: '\Drupal\file_gen_uploader\Controller\ExportController::generatePdf'
+    _title: 'Generate PDF'
+  requirements:
+    _permission: 'access content'
+    nid: \d+

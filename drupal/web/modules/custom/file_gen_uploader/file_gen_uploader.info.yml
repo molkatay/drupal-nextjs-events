@@ -1,0 +1,5 @@
+name: 'File Gen Uploader'
+type: module
+description: 'Simple and clear about the module’s purpose—file generation and FTP uploading.'
+package: Custom
+core_version_requirement: ^10 || ^11

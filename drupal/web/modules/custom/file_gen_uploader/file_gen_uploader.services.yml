@@ -1,0 +1,22 @@
+services:
+  file_gen_uploader.ftp_service:
+    class: 'Drupal\file_gen_uploader\Service\FtpService'
+    arguments:
+      - '@settings'
+  file_gen_uploader.qr_code_generator:
+    class: 'Drupal\file_gen_uploader\Service\QrCodeGenerator'
+
+  file_gen_uploader.pdf_generator:
+    class: 'Drupal\file_gen_uploader\Service\PdfGenerator'
+    arguments: ['@logger.factory']
+
+  file_gen_uploader.file_storage:
+    class: 'Drupal\file_gen_uploader\Service\FileStorage'
+
+  file_gen_uploader.file_generator:
+    class: 'Drupal\file_gen_uploader\Service\FileGenerator'
+    arguments:
+      - '@file_gen_uploader.qr_code_generator'
+      - '@file_gen_uploader.pdf_generator'
+      - '@file_gen_uploader.file_storage'
+      - '@file_gen_uploader.ftp_service'

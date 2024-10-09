@@ -18,6 +18,7 @@
         "ext-redis": "*",
         "composer/installers": "^2.2",
         "cweagans/composer-patches": "^1.7",
+        "dompdf/dompdf": "^3.0",
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/adv_varnish": "^4.0",
@@ -114,8 +115,14 @@
         "drupal/webform_rest": "^4.0",
         "drupal/webprofiler": "^10",
         "drush/drush": "^12",
+        "endroid/qr-code": "^5.1",
+        "league/flysystem": "^3.29",
+        "league/flysystem-ftp": "^3.29",
         "mnsami/composer-custom-directory-installer": "^2.0",
+        "mpdf/mpdf": "^8.2",
+        "phpoffice/phpspreadsheet": "^3.3",
         "symfony/http-client": "^6.4",
+        "tecnickcom/tc-lib-pdf": "^8.0",
         "theodo-group/llphant": "^0.6.0"
     },
     "conflict": {
