@@ -18,6 +18,10 @@ RUN apt-get update && \
         supervisor \
       curl
 
+# Install the FTP extension
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    && docker-php-ext-install ftp
 # Add NodeSource repository for Node.js 18 and install Node.js
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs

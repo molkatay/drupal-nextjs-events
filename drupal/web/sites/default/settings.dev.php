@@ -49,7 +49,6 @@ $settings['trusted_host_patterns'] = [
   '^' . preg_quote('druxt-events.com') . '$',
   '^web$',
   '^varnish$'
-
 ];
 
 # ================================================================

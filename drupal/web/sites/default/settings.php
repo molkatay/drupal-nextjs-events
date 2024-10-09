@@ -26,6 +26,9 @@ $settings['file_chmod_file'] = 0664;
 // private file path
 $settings['file_private_path'] = 'upload/private';
 
+// tmp file path
+$settings['file_temp_path'] = 'sites/default/files/tmp';
+
 // check if environment settings file is here
 if (file_exists($app_root . '/' . $site_path . '/settings.' . $environment . '.php')) {
     require_once $app_root . '/' . $site_path . '/settings.' . $environment . '.php';
@@ -65,3 +68,15 @@ $settings['reverse_proxy_addresses'] = array('127.0.0.1');
 
 
 $settings['update_free_access'] = true;
+
+/** FTP connection */
+$settings['ftp_host'] = 'ftpd-server';
+$settings['ftp_user'] = 'username';
+$settings['ftp_pass'] = 'changeme!';
+$config['file_gen_uploader.settings'] = [
+  'ftp_host' => 'ftpd-server',
+  'ftp_user' => 'username',
+  'ftp_pass' => 'changeme!',
+];
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
